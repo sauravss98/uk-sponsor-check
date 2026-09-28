@@ -8,9 +8,9 @@ which UK Visas and Immigration republishes almost every working day. It also che
 against the published Skilled Worker thresholds and going rates.
 
 ```
-$ sponsor-check check "Gurkha Swindon"
-YES: Gurkha Swindon / Skilled Worker (register 2026-09-28)
-  Everest Kitchen Ltd T/A Gurkha Swindon  (Swindon, Wiltshire)  score 100
+$ sponsor-check check "Synthesia"
+YES: Synthesia / Skilled Worker (register 2026-09-28)
+  Synthesia Limited  (London)  score 100
       - Skilled Worker  [A]
 
 $ sponsor-check salary 45000 2136
