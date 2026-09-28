@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sponsor-check"
+version = "0.1.0"
+description = "Check UK employers against the Home Office register of licensed visa sponsors, from Claude or the command line."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Saurav Suresh" }]
+dependencies = [
+  "httpx>=0.27",
+  "rapidfuzz>=3.9",
+  "mcp>=2.2,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+sponsor-check = "sponsor_check.cli:main"
+sponsor-check-mcp = "sponsor_check.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sponsor_check"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100

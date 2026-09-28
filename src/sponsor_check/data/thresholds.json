@@ -1,0 +1,3565 @@
+{
+ "route": "Skilled Worker",
+ "effective_date": "2025-11-11",
+ "source_url": "https://www.gov.uk/skilled-worker-visa/your-job",
+ "sources": {
+  "eligible_occupations": {
+   "url": "https://www.gov.uk/government/publications/skilled-worker-visa-eligible-occupations/skilled-worker-visa-eligible-occupations-and-codes",
+   "published": "2025-07-22"
+  },
+  "going_rates": {
+   "url": "https://www.gov.uk/government/publications/skilled-worker-visa-going-rates-for-eligible-occupations/skilled-worker-visa-going-rates-for-eligible-occupation-codes",
+   "published": "2025-07-22"
+  },
+  "immigration_salary_list": {
+   "url": "https://www.gov.uk/government/publications/skilled-worker-visa-immigration-salary-list/skilled-worker-visa-immigration-salary-list",
+   "published": "2025-11-11"
+  },
+  "new_entrant": {
+   "url": "https://www.gov.uk/government/publications/skilled-worker-visa-eligible-salary-if-youre-under-26-studying-training-or-in-a-postdoctoral-role/skilled-worker-visa-minimum-salary-if-youre-under-26-studying-training-or-in-a-postdoctoral-role",
+   "published": "2025-07-22"
+  },
+  "phd_discount": {
+   "url": "https://www.gov.uk/government/publications/skilled-worker-visa-jobs-that-qualify-for-a-phd-salary-discount/skilled-worker-visa-jobs-that-qualify-for-a-phd-salary-discount",
+   "published": "2025-07-22"
+  },
+  "salary_requirements": {
+   "url": "https://www.gov.uk/skilled-worker-visa/your-job",
+   "published": "2024-10-31"
+  },
+  "temporary_shortage_list": {
+   "url": "https://www.gov.uk/government/publications/skilled-worker-visa-temporary-shortage-list/skilled-worker-visa-temporary-shortage-list",
+   "published": "2025-07-22"
+  }
+ },
+ "general_thresholds": {
+  "standard": 41700,
+  "discounted_floor": 33400,
+  "non_stem_phd_floor": 37500
+ },
+ "hours_per_week_basis": 37.5,
+ "national_pay_scale_urls": [
+  "https://www.gov.uk/government/publications/national-pay-scales-for-eligible-healthcare-jobs",
+  "https://www.gov.uk/government/publications/national-pay-scales-for-eligible-teaching-and-education-jobs"
+ ],
+ "occupations": {
+  "1111": {
+   "job_type": "Chief executives and senior officials",
+   "skill_level": "Higher Skilled",
+   "going_rate": 88100,
+   "lower_going_rate": 60000,
+   "new_entrant_rate": 61600,
+   "new_entrant_lower_rate": 42000,
+   "phd_non_stem_rate": 79300,
+   "phd_stem_rate": 70400,
+   "phd_non_stem_lower_rate": 54000,
+   "phd_stem_lower_rate": 48000
+  },
+  "1112": {
+   "job_type": "Elected officers and representatives",
+   "skill_level": "Ineligible"
+  },
+  "1121": {
+   "job_type": "Production managers and directors in manufacturing",
+   "skill_level": "Higher Skilled",
+   "going_rate": 55000,
+   "lower_going_rate": 40000,
+   "new_entrant_rate": 38500,
+   "new_entrant_lower_rate": 28000,
+   "phd_non_stem_rate": 49500,
+   "phd_stem_rate": 44000,
+   "phd_non_stem_lower_rate": 36000,
+   "phd_stem_lower_rate": 32000
+  },
+  "1122": {
+   "job_type": "Production managers and directors in construction",
+   "skill_level": "Higher Skilled",
+   "going_rate": 53400,
+   "lower_going_rate": 41400,
+   "new_entrant_rate": 37400,
+   "new_entrant_lower_rate": 29000,
+   "phd_non_stem_rate": 48100,
+   "phd_stem_rate": 42700,
+   "phd_non_stem_lower_rate": 37200,
+   "phd_stem_lower_rate": 33100
+  },
+  "1123": {
+   "job_type": "Production managers and directors in mining and energy",
+   "skill_level": "Higher Skilled",
+   "going_rate": 54000,
+   "lower_going_rate": 47100,
+   "new_entrant_rate": 37800,
+   "new_entrant_lower_rate": 33000,
+   "phd_non_stem_rate": 48600,
+   "phd_stem_rate": 43200,
+   "phd_non_stem_lower_rate": 42400,
+   "phd_stem_lower_rate": 37700
+  },
+  "1131": {
+   "job_type": "Financial managers and directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 75100,
+   "lower_going_rate": 49700,
+   "new_entrant_rate": 52600,
+   "new_entrant_lower_rate": 34800,
+   "phd_non_stem_rate": 67600,
+   "phd_stem_rate": 60100,
+   "phd_non_stem_lower_rate": 44700,
+   "phd_stem_lower_rate": 39700
+  },
+  "1132": {
+   "job_type": "Marketing, sales and advertising directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 87300,
+   "lower_going_rate": 60000,
+   "new_entrant_rate": 61100,
+   "new_entrant_lower_rate": 42000,
+   "phd_non_stem_rate": 78600,
+   "phd_stem_rate": 69800,
+   "phd_non_stem_lower_rate": 54000,
+   "phd_stem_lower_rate": 48000
+  },
+  "1133": {
+   "job_type": "Public relations and communications directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 77200,
+   "lower_going_rate": 59700,
+   "new_entrant_rate": 54000,
+   "new_entrant_lower_rate": 41800,
+   "phd_non_stem_rate": 69500,
+   "phd_stem_rate": 61700,
+   "phd_non_stem_lower_rate": 53800,
+   "phd_stem_lower_rate": 47800
+  },
+  "1134": {
+   "job_type": "Purchasing managers and directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 54700,
+   "lower_going_rate": 42500,
+   "new_entrant_rate": 38300,
+   "new_entrant_lower_rate": 29800,
+   "phd_non_stem_rate": 49300,
+   "phd_stem_rate": 43800,
+   "phd_non_stem_lower_rate": 38300,
+   "phd_stem_lower_rate": 34000
+  },
+  "1135": {
+   "job_type": "Charitable organisation managers and directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 44300,
+   "lower_going_rate": 35900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25100,
+   "phd_non_stem_rate": 39900,
+   "phd_stem_rate": 35500,
+   "phd_non_stem_lower_rate": 32300,
+   "phd_stem_lower_rate": 28700
+  },
+  "1136": {
+   "job_type": "Human resource managers and directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 52900,
+   "lower_going_rate": 41200,
+   "new_entrant_rate": 37100,
+   "new_entrant_lower_rate": 28800,
+   "phd_non_stem_rate": 47600,
+   "phd_stem_rate": 42300,
+   "phd_non_stem_lower_rate": 37100,
+   "phd_stem_lower_rate": 32900
+  },
+  "1137": {
+   "job_type": "Information technology directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 86000,
+   "lower_going_rate": 61200,
+   "new_entrant_rate": 60200,
+   "new_entrant_lower_rate": 42800,
+   "phd_non_stem_rate": 77400,
+   "phd_stem_rate": 68800,
+   "phd_non_stem_lower_rate": 55000,
+   "phd_stem_lower_rate": 48900
+  },
+  "1139": {
+   "job_type": "Functional managers and directors not elsewhere classified.",
+   "skill_level": "Higher Skilled",
+   "going_rate": 74700,
+   "lower_going_rate": 52300,
+   "new_entrant_rate": 52300,
+   "new_entrant_lower_rate": 36600,
+   "phd_non_stem_rate": 67200,
+   "phd_stem_rate": 59700,
+   "phd_non_stem_lower_rate": 47100,
+   "phd_stem_lower_rate": 41800
+  },
+  "1140": {
+   "job_type": "Directors in logistics, warehousing and transport",
+   "skill_level": "Higher Skilled",
+   "going_rate": 81400,
+   "lower_going_rate": 53600,
+   "new_entrant_rate": 57000,
+   "new_entrant_lower_rate": 37500,
+   "phd_non_stem_rate": 73300,
+   "phd_stem_rate": 65100,
+   "phd_non_stem_lower_rate": 48200,
+   "phd_stem_lower_rate": 42900
+  },
+  "1150": {
+   "job_type": "Managers and directors in retail and wholesale",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36400,
+   "lower_going_rate": 29400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 26400,
+   "phd_stem_lower_rate": 25000
+  },
+  "1161": {
+   "job_type": "Officers in armed forces",
+   "skill_level": "Ineligible"
+  },
+  "1162": {
+   "job_type": "Senior police officers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 64000,
+   "lower_going_rate": 60800,
+   "new_entrant_rate": 44800,
+   "new_entrant_lower_rate": 42600,
+   "phd_non_stem_rate": 57600,
+   "phd_stem_rate": 51200,
+   "phd_non_stem_lower_rate": 54700,
+   "phd_stem_lower_rate": 48700
+  },
+  "1163": {
+   "job_type": "Senior officers in fire, ambulance, prison and related services",
+   "skill_level": "Higher Skilled",
+   "going_rate": 61600,
+   "lower_going_rate": 50000,
+   "new_entrant_rate": 43100,
+   "new_entrant_lower_rate": 35000,
+   "phd_non_stem_rate": 55400,
+   "phd_stem_rate": 49200,
+   "phd_non_stem_lower_rate": 45000,
+   "phd_stem_lower_rate": 40000
+  },
+  "1171": {
+   "job_type": "Health services and public health managers and directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 50300,
+   "lower_going_rate": 41600,
+   "new_entrant_rate": 35200,
+   "new_entrant_lower_rate": 29100,
+   "phd_non_stem_rate": 45300,
+   "phd_stem_rate": 40300,
+   "phd_non_stem_lower_rate": 37400,
+   "phd_stem_lower_rate": 33300
+  },
+  "1172": {
+   "job_type": "Social services managers and directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 43000,
+   "lower_going_rate": 33100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 38700,
+   "phd_stem_rate": 34400,
+   "phd_non_stem_lower_rate": 29800,
+   "phd_stem_lower_rate": 26500
+  },
+  "1211": {
+   "job_type": "Managers and proprietors in agriculture and horticulture",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35900,
+   "lower_going_rate": 29100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1212": {
+   "job_type": "Managers and proprietors in forestry, fishing and related services",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Managers and proprietors in forestry, fishing and related services – only “fishing boat masters”",
+    "areas": "Scotland only",
+    "rate": 33400,
+    "lower_rate": 25800
+   }
+  },
+  "1221": {
+   "job_type": "Hotel and accommodation managers and proprietors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 38300,
+   "lower_going_rate": 29800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1222": {
+   "job_type": "Restaurant and catering establishment managers and proprietors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1223": {
+   "job_type": "Publicans and managers of licensed premises",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36300,
+   "lower_going_rate": 30900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1224": {
+   "job_type": "Leisure and sports managers and proprietors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34100,
+   "lower_going_rate": 26600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1225": {
+   "job_type": "Travel agency managers and proprietors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36000,
+   "lower_going_rate": 30000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1231": {
+   "job_type": "Health care practice managers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 40400,
+   "lower_going_rate": 32600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1232": {
+   "job_type": "Residential, day and domiciliary care managers and proprietors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 40400,
+   "lower_going_rate": 32000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Residential, day and domiciliary care managers and proprietors – all jobs",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "1233": {
+   "job_type": "Early education and childcare services proprietors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1241": {
+   "job_type": "Managers in transport and distribution",
+   "skill_level": "Higher Skilled",
+   "going_rate": 44900,
+   "lower_going_rate": 35200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1242": {
+   "job_type": "Managers in storage and warehousing",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35100,
+   "lower_going_rate": 29100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1243": {
+   "job_type": "Managers in logistics",
+   "skill_level": "Medium Skilled",
+   "going_rate": 44900,
+   "lower_going_rate": 37300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 26100,
+   "temporary_shortage_list": {
+    "job_types": "Managers in logistics",
+    "rate": 44900,
+    "lower_rate": 37300
+   }
+  },
+  "1251": {
+   "job_type": "Property, housing and estate managers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 42600,
+   "lower_going_rate": 32500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1252": {
+   "job_type": "Garage managers and proprietors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 45600,
+   "lower_going_rate": 36300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25400
+  },
+  "1253": {
+   "job_type": "Hairdressing and beauty salon managers and proprietors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1254": {
+   "job_type": "Waste disposal and environmental services managers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 48300,
+   "lower_going_rate": 39700,
+   "new_entrant_rate": 33800,
+   "new_entrant_lower_rate": 27800
+  },
+  "1255": {
+   "job_type": "Managers and directors in the creative industries",
+   "skill_level": "Higher Skilled",
+   "going_rate": 44900,
+   "lower_going_rate": 37000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25900
+  },
+  "1256": {
+   "job_type": "Betting shop and gambling establishment managers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1257": {
+   "job_type": "Hire services managers and proprietors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 28200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "1258": {
+   "job_type": "Directors in consultancy services",
+   "skill_level": "Medium Skilled",
+   "going_rate": 70100,
+   "lower_going_rate": 44600,
+   "new_entrant_rate": 49100,
+   "new_entrant_lower_rate": 31300,
+   "temporary_shortage_list": {
+    "job_types": "Directors in consultancy services",
+    "rate": 70100,
+    "lower_rate": 44600
+   }
+  },
+  "1259": {
+   "job_type": "Managers and proprietors in other services not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 41400,
+   "lower_going_rate": 33100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "2111": {
+   "job_type": "Chemical scientists",
+   "skill_level": "Higher Skilled",
+   "going_rate": 39900,
+   "lower_going_rate": 31300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 35900,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 28200,
+   "phd_stem_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Chemical scientists – only jobs in the nuclear industry",
+    "areas": "Scotland only",
+    "rate": 39900,
+    "lower_rate": 31300
+   }
+  },
+  "2112": {
+   "job_type": "Biological scientists",
+   "skill_level": "Higher Skilled",
+   "going_rate": 40300,
+   "lower_going_rate": 30700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 36300,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 27600,
+   "phd_stem_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Biological scientists – all jobs",
+    "areas": "UK wide",
+    "rate": 40300,
+    "lower_rate": 30700
+   }
+  },
+  "2113": {
+   "job_type": "Biochemists and biomedical scientists",
+   "skill_level": "Higher Skilled",
+   "going_rate": 45900,
+   "lower_going_rate": 35100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 41300,
+   "phd_stem_rate": 36700,
+   "phd_non_stem_lower_rate": 31600,
+   "phd_stem_lower_rate": 28100
+  },
+  "2114": {
+   "job_type": "Physical scientists",
+   "skill_level": "Higher Skilled",
+   "going_rate": 54600,
+   "lower_going_rate": 41500,
+   "new_entrant_rate": 38200,
+   "new_entrant_lower_rate": 29000,
+   "phd_non_stem_rate": 49100,
+   "phd_stem_rate": 43600,
+   "phd_non_stem_lower_rate": 37300,
+   "phd_stem_lower_rate": 33200
+  },
+  "2115": {
+   "job_type": "Social and humanities scientists",
+   "skill_level": "Higher Skilled",
+   "going_rate": 40400,
+   "lower_going_rate": 28000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 36400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25200,
+   "phd_stem_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Social and humanities scientists – only archaeologists",
+    "areas": "UK wide",
+    "rate": 40400,
+    "lower_rate": 28000
+   }
+  },
+  "2119": {
+   "job_type": "Natural and social science professionals not elsewhere classified.",
+   "skill_level": "Higher Skilled",
+   "going_rate": 41500,
+   "lower_going_rate": 33700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 37300,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 30300,
+   "phd_stem_lower_rate": 26900
+  },
+  "2121": {
+   "job_type": "Civil engineers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 50400,
+   "lower_going_rate": 39200,
+   "new_entrant_rate": 35200,
+   "new_entrant_lower_rate": 27400,
+   "phd_non_stem_rate": 45300,
+   "phd_stem_rate": 40300,
+   "phd_non_stem_lower_rate": 35300,
+   "phd_stem_lower_rate": 31300
+  },
+  "2122": {
+   "job_type": "Mechanical engineers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 46800,
+   "lower_going_rate": 38400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 26900,
+   "phd_non_stem_rate": 42100,
+   "phd_stem_rate": 37400,
+   "phd_non_stem_lower_rate": 34600,
+   "phd_stem_lower_rate": 30700
+  },
+  "2123": {
+   "job_type": "Electrical engineers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 58700,
+   "lower_going_rate": 47100,
+   "new_entrant_rate": 41100,
+   "new_entrant_lower_rate": 33000,
+   "phd_non_stem_rate": 52900,
+   "phd_stem_rate": 47000,
+   "phd_non_stem_lower_rate": 42400,
+   "phd_stem_lower_rate": 37700
+  },
+  "2124": {
+   "job_type": "Electronics engineers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 52000,
+   "lower_going_rate": 41200,
+   "new_entrant_rate": 36400,
+   "new_entrant_lower_rate": 28900,
+   "phd_non_stem_rate": 46800,
+   "phd_stem_rate": 41600,
+   "phd_non_stem_lower_rate": 37100,
+   "phd_stem_lower_rate": 33000
+  },
+  "2125": {
+   "job_type": "Production and process engineers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 45000,
+   "lower_going_rate": 36500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25600,
+   "phd_non_stem_rate": 40500,
+   "phd_stem_rate": 36000,
+   "phd_non_stem_lower_rate": 32900,
+   "phd_stem_lower_rate": 29200
+  },
+  "2126": {
+   "job_type": "Aerospace engineers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 52400,
+   "lower_going_rate": 43400,
+   "new_entrant_rate": 36700,
+   "new_entrant_lower_rate": 30400,
+   "phd_non_stem_rate": 47200,
+   "phd_stem_rate": 41900,
+   "phd_non_stem_lower_rate": 39000,
+   "phd_stem_lower_rate": 34700
+  },
+  "2127": {
+   "job_type": "Engineering project managers and project engineers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 51900,
+   "lower_going_rate": 40600,
+   "new_entrant_rate": 36300,
+   "new_entrant_lower_rate": 28400,
+   "phd_non_stem_rate": 46700,
+   "phd_stem_rate": 41500,
+   "phd_non_stem_lower_rate": 36500,
+   "phd_stem_lower_rate": 32500
+  },
+  "2129": {
+   "job_type": "Engineering professionals not elsewhere classified.",
+   "skill_level": "Higher Skilled",
+   "going_rate": 46100,
+   "lower_going_rate": 37500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 26200,
+   "phd_non_stem_rate": 41500,
+   "phd_stem_rate": 36900,
+   "phd_non_stem_lower_rate": 33700,
+   "phd_stem_lower_rate": 30000
+  },
+  "2131": {
+   "job_type": "IT project managers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 58200,
+   "lower_going_rate": 42600,
+   "new_entrant_rate": 40700,
+   "new_entrant_lower_rate": 29800,
+   "phd_non_stem_rate": 52400,
+   "phd_stem_rate": 46600,
+   "phd_non_stem_lower_rate": 38300,
+   "phd_stem_lower_rate": 34100
+  },
+  "2132": {
+   "job_type": "IT managers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 55000,
+   "lower_going_rate": 43000,
+   "new_entrant_rate": 38500,
+   "new_entrant_lower_rate": 30100,
+   "phd_non_stem_rate": 49500,
+   "phd_stem_rate": 44000,
+   "phd_non_stem_lower_rate": 38700,
+   "phd_stem_lower_rate": 34400
+  },
+  "2133": {
+   "job_type": "IT business analysts, architects and systems designers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 54900,
+   "lower_going_rate": 42400,
+   "new_entrant_rate": 38400,
+   "new_entrant_lower_rate": 29600,
+   "phd_non_stem_rate": 49400,
+   "phd_stem_rate": 43900,
+   "phd_non_stem_lower_rate": 38100,
+   "phd_stem_lower_rate": 33900
+  },
+  "2134": {
+   "job_type": "Programmers and software development professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 54700,
+   "lower_going_rate": 40000,
+   "new_entrant_rate": 38300,
+   "new_entrant_lower_rate": 28000,
+   "phd_non_stem_rate": 49200,
+   "phd_stem_rate": 43700,
+   "phd_non_stem_lower_rate": 36000,
+   "phd_stem_lower_rate": 32000
+  },
+  "2135": {
+   "job_type": "Cyber security professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 48500,
+   "lower_going_rate": 35300,
+   "new_entrant_rate": 34000,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 43700,
+   "phd_stem_rate": 38800,
+   "phd_non_stem_lower_rate": 31800,
+   "phd_stem_lower_rate": 28200
+  },
+  "2136": {
+   "job_type": "IT quality and testing professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 41200,
+   "lower_going_rate": 34500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 37100,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 31000,
+   "phd_stem_lower_rate": 27600
+  },
+  "2137": {
+   "job_type": "IT network professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 45600,
+   "lower_going_rate": 38100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 26700,
+   "phd_non_stem_rate": 41100,
+   "phd_stem_rate": 36500,
+   "phd_non_stem_lower_rate": 34300,
+   "phd_stem_lower_rate": 30500
+  },
+  "2139": {
+   "job_type": "Information technology professionals not elsewhere classified.",
+   "skill_level": "Higher Skilled",
+   "going_rate": 52300,
+   "lower_going_rate": 38700,
+   "new_entrant_rate": 36600,
+   "new_entrant_lower_rate": 27100,
+   "phd_non_stem_rate": 47100,
+   "phd_stem_rate": 41800,
+   "phd_non_stem_lower_rate": 34800,
+   "phd_stem_lower_rate": 31000
+  },
+  "2141": {
+   "job_type": "Web design professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 43800,
+   "lower_going_rate": 31300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 39400,
+   "phd_stem_rate": 35100,
+   "phd_non_stem_lower_rate": 28200,
+   "phd_stem_lower_rate": 25100
+  },
+  "2142": {
+   "job_type": "Graphic and multimedia designers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Graphic and multimedia designers – all jobs",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 26200
+   }
+  },
+  "2151": {
+   "job_type": "Conservation professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 36000,
+   "lower_going_rate": 29800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 26800,
+   "phd_stem_lower_rate": 25000
+  },
+  "2152": {
+   "job_type": "Environment professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 37200,
+   "lower_going_rate": 31400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33500,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 28300,
+   "phd_stem_lower_rate": 25200
+  },
+  "2161": {
+   "job_type": "Research and development (r&d) managers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 54400,
+   "lower_going_rate": 40000,
+   "new_entrant_rate": 38100,
+   "new_entrant_lower_rate": 28000,
+   "phd_non_stem_rate": 48900,
+   "phd_stem_rate": 43500,
+   "phd_non_stem_lower_rate": 36000,
+   "phd_stem_lower_rate": 32000
+  },
+  "2162": {
+   "job_type": "Other researchers, unspecified discipline",
+   "skill_level": "Higher Skilled",
+   "going_rate": 43600,
+   "lower_going_rate": 37400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 26200,
+   "phd_non_stem_rate": 39200,
+   "phd_stem_rate": 34900,
+   "phd_non_stem_lower_rate": 33700,
+   "phd_stem_lower_rate": 30000
+  },
+  "2211": {
+   "job_type": "Generalist medical practitioners",
+   "skill_level": "Higher Skilled"
+  },
+  "2212": {
+   "job_type": "Specialist medical practitioners",
+   "skill_level": "Higher Skilled"
+  },
+  "2221": {
+   "job_type": "Physiotherapists",
+   "skill_level": "Higher Skilled"
+  },
+  "2222": {
+   "job_type": "Occupational therapists",
+   "skill_level": "Higher Skilled"
+  },
+  "2223": {
+   "job_type": "Speech and language therapists",
+   "skill_level": "Higher Skilled"
+  },
+  "2224": {
+   "job_type": "Psychotherapists and cognitive behaviour therapists",
+   "skill_level": "Higher Skilled"
+  },
+  "2225": {
+   "job_type": "Clinical psychologists",
+   "skill_level": "Higher Skilled"
+  },
+  "2226": {
+   "job_type": "Other psychologists",
+   "skill_level": "Higher Skilled"
+  },
+  "2229": {
+   "job_type": "Therapy professionals not elsewhere classified.",
+   "skill_level": "Higher Skilled"
+  },
+  "2231": {
+   "job_type": "Midwifery nurses",
+   "skill_level": "Higher Skilled"
+  },
+  "2232": {
+   "job_type": "Registered community nurses",
+   "skill_level": "Higher Skilled"
+  },
+  "2233": {
+   "job_type": "Registered specialist nurses",
+   "skill_level": "Higher Skilled"
+  },
+  "2234": {
+   "job_type": "Registered nurse practitioners",
+   "skill_level": "Higher Skilled"
+  },
+  "2235": {
+   "job_type": "Registered mental health nurses",
+   "skill_level": "Higher Skilled"
+  },
+  "2236": {
+   "job_type": "Registered children’s nurses",
+   "skill_level": "Higher Skilled"
+  },
+  "2237": {
+   "job_type": "Other registered nursing professionals",
+   "skill_level": "Higher Skilled"
+  },
+  "2240": {
+   "job_type": "Veterinarians",
+   "skill_level": "Higher Skilled",
+   "going_rate": 49500,
+   "lower_going_rate": 38000,
+   "new_entrant_rate": 34600,
+   "new_entrant_lower_rate": 26600,
+   "phd_non_stem_rate": 44500,
+   "phd_stem_rate": 39600,
+   "phd_non_stem_lower_rate": 34200,
+   "phd_stem_lower_rate": 30400
+  },
+  "2251": {
+   "job_type": "Pharmacists",
+   "skill_level": "Higher Skilled"
+  },
+  "2252": {
+   "job_type": "Optometrists",
+   "skill_level": "Higher Skilled"
+  },
+  "2253": {
+   "job_type": "Dental practitioners",
+   "skill_level": "Higher Skilled"
+  },
+  "2254": {
+   "job_type": "Medical radiographers",
+   "skill_level": "Higher Skilled"
+  },
+  "2255": {
+   "job_type": "Paramedics",
+   "skill_level": "Higher Skilled"
+  },
+  "2256": {
+   "job_type": "Podiatrists",
+   "skill_level": "Higher Skilled"
+  },
+  "2259": {
+   "job_type": "Other health professionals not elsewhere classified.",
+   "skill_level": "Higher Skilled"
+  },
+  "2311": {
+   "job_type": "Higher education teaching professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 52600,
+   "lower_going_rate": 40600,
+   "new_entrant_rate": 36800,
+   "new_entrant_lower_rate": 28400,
+   "phd_non_stem_rate": 47300,
+   "phd_stem_rate": 42100,
+   "phd_non_stem_lower_rate": 36500,
+   "phd_stem_lower_rate": 32500
+  },
+  "2312": {
+   "job_type": "Further education teaching professionals",
+   "skill_level": "Higher Skilled"
+  },
+  "2313": {
+   "job_type": "Secondary education teaching professionals",
+   "skill_level": "Higher Skilled"
+  },
+  "2314": {
+   "job_type": "Primary education teaching professionals",
+   "skill_level": "Higher Skilled"
+  },
+  "2315": {
+   "job_type": "Nursery education teaching professionals",
+   "skill_level": "Higher Skilled"
+  },
+  "2316": {
+   "job_type": "Special and additional needs education teaching professionals",
+   "skill_level": "Higher Skilled"
+  },
+  "2317": {
+   "job_type": "Teachers of english as a foreign language",
+   "skill_level": "Higher Skilled",
+   "going_rate": 36200,
+   "lower_going_rate": 30100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 27100,
+   "phd_stem_lower_rate": 25000
+  },
+  "2319": {
+   "job_type": "Teaching professionals not elsewhere classified.",
+   "skill_level": "Higher Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000
+  },
+  "2321": {
+   "job_type": "Head teachers and principals",
+   "skill_level": "Higher Skilled"
+  },
+  "2322": {
+   "job_type": "Education managers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 43900,
+   "lower_going_rate": 34900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 39500,
+   "phd_stem_rate": 35100,
+   "phd_non_stem_lower_rate": 31400,
+   "phd_stem_lower_rate": 27900
+  },
+  "2323": {
+   "job_type": "Education advisers and school inspectors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 42200,
+   "lower_going_rate": 35700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 37900,
+   "phd_stem_rate": 33700,
+   "phd_non_stem_lower_rate": 32100,
+   "phd_stem_lower_rate": 28500
+  },
+  "2324": {
+   "job_type": "Early education and childcare services managers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000
+  },
+  "2329": {
+   "job_type": "Other educational professionals not elsewhere classified",
+   "skill_level": "Higher Skilled",
+   "going_rate": 40600,
+   "lower_going_rate": 30000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 36600,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 27000,
+   "phd_stem_lower_rate": 25000
+  },
+  "2411": {
+   "job_type": "Barristers and judges",
+   "skill_level": "Higher Skilled",
+   "going_rate": 59400,
+   "lower_going_rate": 37000,
+   "new_entrant_rate": 41600,
+   "new_entrant_lower_rate": 25900,
+   "phd_non_stem_rate": 53500,
+   "phd_stem_rate": 47500,
+   "phd_non_stem_lower_rate": 33300,
+   "phd_stem_lower_rate": 29600
+  },
+  "2412": {
+   "job_type": "Solicitors and lawyers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 51600,
+   "lower_going_rate": 39000,
+   "new_entrant_rate": 36100,
+   "new_entrant_lower_rate": 27300,
+   "phd_non_stem_rate": 46500,
+   "phd_stem_rate": 41300,
+   "phd_non_stem_lower_rate": 35100,
+   "phd_stem_lower_rate": 31200
+  },
+  "2419": {
+   "job_type": "Legal professionals not elsewhere classified.",
+   "skill_level": "Higher Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000
+  },
+  "2421": {
+   "job_type": "Chartered and certified accountants",
+   "skill_level": "Higher Skilled",
+   "going_rate": 49200,
+   "lower_going_rate": 36900,
+   "new_entrant_rate": 34500,
+   "new_entrant_lower_rate": 25800,
+   "phd_non_stem_rate": 44300,
+   "phd_stem_rate": 39400,
+   "phd_non_stem_lower_rate": 33200,
+   "phd_stem_lower_rate": 29500
+  },
+  "2422": {
+   "job_type": "Finance and investment analysts and advisers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 45800,
+   "lower_going_rate": 34200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 41200,
+   "phd_stem_rate": 36700,
+   "phd_non_stem_lower_rate": 30800,
+   "phd_stem_lower_rate": 27300
+  },
+  "2423": {
+   "job_type": "Taxation experts",
+   "skill_level": "Higher Skilled",
+   "going_rate": 48500,
+   "lower_going_rate": 35400,
+   "new_entrant_rate": 34000,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 43700,
+   "phd_stem_rate": 38800,
+   "phd_non_stem_lower_rate": 31900,
+   "phd_stem_lower_rate": 28300
+  },
+  "2431": {
+   "job_type": "Management consultants and business analysts",
+   "skill_level": "Higher Skilled",
+   "going_rate": 50200,
+   "lower_going_rate": 36000,
+   "new_entrant_rate": 35100,
+   "new_entrant_lower_rate": 25200,
+   "phd_non_stem_rate": 45200,
+   "phd_stem_rate": 40200,
+   "phd_non_stem_lower_rate": 32400,
+   "phd_stem_lower_rate": 28800
+  },
+  "2432": {
+   "job_type": "Marketing and commercial managers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 50100,
+   "lower_going_rate": 39900,
+   "new_entrant_rate": 35000,
+   "new_entrant_lower_rate": 28000,
+   "phd_non_stem_rate": 45100,
+   "phd_stem_rate": 40000,
+   "phd_non_stem_lower_rate": 35900,
+   "phd_stem_lower_rate": 31900
+  },
+  "2433": {
+   "job_type": "Actuaries, economists and statisticians",
+   "skill_level": "Higher Skilled",
+   "going_rate": 55100,
+   "lower_going_rate": 40700,
+   "new_entrant_rate": 38600,
+   "new_entrant_lower_rate": 28500,
+   "phd_non_stem_rate": 49600,
+   "phd_stem_rate": 44100,
+   "phd_non_stem_lower_rate": 36600,
+   "phd_stem_lower_rate": 32500
+  },
+  "2434": {
+   "job_type": "Business and related research professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 38800,
+   "lower_going_rate": 31500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 35000,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 28400,
+   "phd_stem_lower_rate": 25200
+  },
+  "2435": {
+   "job_type": "Professional/chartered company secretaries",
+   "skill_level": "Higher Skilled",
+   "going_rate": 58200,
+   "lower_going_rate": 38600,
+   "new_entrant_rate": 40700,
+   "new_entrant_lower_rate": 27000,
+   "phd_non_stem_rate": 52300,
+   "phd_stem_rate": 46500,
+   "phd_non_stem_lower_rate": 34700,
+   "phd_stem_lower_rate": 30900
+  },
+  "2439": {
+   "job_type": "Business, research and administrative professionals not elsewhere classified.",
+   "skill_level": "Higher Skilled",
+   "going_rate": 56600,
+   "lower_going_rate": 43200,
+   "new_entrant_rate": 39600,
+   "new_entrant_lower_rate": 30200,
+   "phd_non_stem_rate": 50900,
+   "phd_stem_rate": 45300,
+   "phd_non_stem_lower_rate": 38900,
+   "phd_stem_lower_rate": 34500
+  },
+  "2440": {
+   "job_type": "Business and financial project management professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 56500,
+   "lower_going_rate": 43300,
+   "new_entrant_rate": 39500,
+   "new_entrant_lower_rate": 30300,
+   "phd_non_stem_rate": 50800,
+   "phd_stem_rate": 45200,
+   "phd_non_stem_lower_rate": 39000,
+   "phd_stem_lower_rate": 34700
+  },
+  "2451": {
+   "job_type": "Architects",
+   "skill_level": "Higher Skilled",
+   "going_rate": 47600,
+   "lower_going_rate": 37800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 26400,
+   "phd_non_stem_rate": 42800,
+   "phd_stem_rate": 38100,
+   "phd_non_stem_lower_rate": 34000,
+   "phd_stem_lower_rate": 30200
+  },
+  "2452": {
+   "job_type": "Chartered architectural technologists, planning officers and consultants",
+   "skill_level": "Higher Skilled",
+   "going_rate": 35800,
+   "lower_going_rate": 28200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25300,
+   "phd_stem_lower_rate": 25000
+  },
+  "2453": {
+   "job_type": "Quantity surveyors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 48600,
+   "lower_going_rate": 38500,
+   "new_entrant_rate": 34100,
+   "new_entrant_lower_rate": 26900,
+   "phd_non_stem_rate": 43800,
+   "phd_stem_rate": 38900,
+   "phd_non_stem_lower_rate": 34600,
+   "phd_stem_lower_rate": 30800
+  },
+  "2454": {
+   "job_type": "Chartered surveyors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 43800,
+   "lower_going_rate": 36000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25200,
+   "phd_non_stem_rate": 39400,
+   "phd_stem_rate": 35000,
+   "phd_non_stem_lower_rate": 32400,
+   "phd_stem_lower_rate": 28800
+  },
+  "2455": {
+   "job_type": "Construction project managers and related professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 44300,
+   "lower_going_rate": 36600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25600,
+   "phd_non_stem_rate": 39900,
+   "phd_stem_rate": 35400,
+   "phd_non_stem_lower_rate": 32900,
+   "phd_stem_lower_rate": 29300
+  },
+  "2461": {
+   "job_type": "Social workers",
+   "skill_level": "Higher Skilled"
+  },
+  "2462": {
+   "job_type": "Probation officers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 35700,
+   "lower_going_rate": 29400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 26400,
+   "phd_stem_lower_rate": 25000
+  },
+  "2463": {
+   "job_type": "Clergy",
+   "skill_level": "Ineligible"
+  },
+  "2464": {
+   "job_type": "Youth work professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 38000,
+   "lower_going_rate": 34500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 34200,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 31000,
+   "phd_stem_lower_rate": 27600
+  },
+  "2469": {
+   "job_type": "Welfare professionals not elsewhere classified.",
+   "skill_level": "Higher Skilled",
+   "going_rate": 39700,
+   "lower_going_rate": 33500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 35700,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 30200,
+   "phd_stem_lower_rate": 26800
+  },
+  "2471": {
+   "job_type": "Librarians",
+   "skill_level": "Higher Skilled",
+   "going_rate": 34800,
+   "lower_going_rate": 26400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000
+  },
+  "2472": {
+   "job_type": "Archivists, conservators and curators",
+   "skill_level": "Higher Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 29600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 26700,
+   "phd_stem_lower_rate": 25000
+  },
+  "2481": {
+   "job_type": "Quality control and planning engineers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 41300,
+   "lower_going_rate": 34100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 37100,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 30700,
+   "phd_stem_lower_rate": 27300
+  },
+  "2482": {
+   "job_type": "Quality assurance and regulatory professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 48200,
+   "lower_going_rate": 38100,
+   "new_entrant_rate": 33800,
+   "new_entrant_lower_rate": 26700,
+   "phd_non_stem_rate": 43400,
+   "phd_stem_rate": 38600,
+   "phd_non_stem_lower_rate": 34300,
+   "phd_stem_lower_rate": 30500
+  },
+  "2483": {
+   "job_type": "Environmental health professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 40900,
+   "lower_going_rate": 34100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 36800,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 30700,
+   "phd_stem_lower_rate": 27300
+  },
+  "2491": {
+   "job_type": "Newspaper, periodical and broadcast editors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 39600,
+   "lower_going_rate": 32200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 35600,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 28900,
+   "phd_stem_lower_rate": 25700
+  },
+  "2492": {
+   "job_type": "Newspaper and periodical broadcast journalists and reporters",
+   "skill_level": "Higher Skilled",
+   "going_rate": 34000,
+   "lower_going_rate": 25500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000
+  },
+  "2493": {
+   "job_type": "Public relations professionals",
+   "skill_level": "Higher Skilled",
+   "going_rate": 37000,
+   "lower_going_rate": 30100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 27100,
+   "phd_stem_lower_rate": 25000
+  },
+  "2494": {
+   "job_type": "Advertising accounts managers and creative directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 46000,
+   "lower_going_rate": 37200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 26000,
+   "phd_non_stem_rate": 41400,
+   "phd_stem_rate": 36800,
+   "phd_non_stem_lower_rate": 33500,
+   "phd_stem_lower_rate": 29700
+  },
+  "3111": {
+   "job_type": "Laboratory technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Laboratory technicians – only jobs requiring 3 or more years’ related on-the-job experience. This experience must not have been gained through working illegally.",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   },
+   "temporary_shortage_list": {
+    "job_types": "Laboratory technicians",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "3112": {
+   "job_type": "Electrical and electronics technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 39300,
+   "lower_going_rate": 30800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 35400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 27800,
+   "phd_stem_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Electrical and electronics technicians",
+    "rate": 39300,
+    "lower_rate": 30800
+   }
+  },
+  "3113": {
+   "job_type": "Engineering technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 42500,
+   "lower_going_rate": 34700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 38300,
+   "phd_stem_rate": 34000,
+   "phd_non_stem_lower_rate": 31200,
+   "phd_stem_lower_rate": 27700,
+   "temporary_shortage_list": {
+    "job_types": "Engineering technicians",
+    "rate": 42500,
+    "lower_rate": 34700
+   }
+  },
+  "3114": {
+   "job_type": "Building and civil engineering technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25100,
+   "phd_stem_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Building and civil engineering technicians",
+    "rate": 33400,
+    "lower_rate": 27900
+   }
+  },
+  "3115": {
+   "job_type": "Quality assurance technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Quality assurance technicians",
+    "rate": 33400,
+    "lower_rate": 26500
+   }
+  },
+  "3116": {
+   "job_type": "Planning, process and production technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34800,
+   "lower_going_rate": 28700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25900,
+   "phd_stem_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Planning, process and production technicians",
+    "rate": 34800,
+    "lower_rate": 28700
+   }
+  },
+  "3119": {
+   "job_type": "Science, engineering and production technicians not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34600,
+   "lower_going_rate": 28000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25200,
+   "phd_stem_lower_rate": 25000
+  },
+  "3120": {
+   "job_type": "CAD, drawing and architectural technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33800,
+   "lower_going_rate": 28700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25800,
+   "phd_stem_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "CAD, drawing and architectural technicians",
+    "rate": 33800,
+    "lower_rate": 28700
+   }
+  },
+  "3131": {
+   "job_type": "IT operations technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35200,
+   "lower_going_rate": 27700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "IT operations technicians",
+    "rate": 35200,
+    "lower_rate": 27700
+   }
+  },
+  "3132": {
+   "job_type": "IT user support technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 25000,
+   "phd_stem_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "IT user support technicians",
+    "rate": 33400,
+    "lower_rate": 27700
+   }
+  },
+  "3133": {
+   "job_type": "Database administrators and web content technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34600,
+   "lower_going_rate": 29200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "phd_non_stem_rate": 33400,
+   "phd_stem_rate": 33400,
+   "phd_non_stem_lower_rate": 26200,
+   "phd_stem_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Database administrators and web content technicians",
+    "rate": 34600,
+    "lower_rate": 29200
+   }
+  },
+  "3211": {
+   "job_type": "Dispensing opticians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3212": {
+   "job_type": "Pharmaceutical technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Pharmaceutical technicians – all jobs",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "3213": {
+   "job_type": "Medical and dental technicians",
+   "skill_level": "Medium Skilled"
+  },
+  "3214": {
+   "job_type": "Complementary health associate professionals",
+   "skill_level": "Medium Skilled – extending in same occupation only",
+   "going_rate": null,
+   "going_rate_note": "Not eligible for standard rate applications",
+   "lower_going_rate": 25000,
+   "new_entrant_lower_rate": 25000
+  },
+  "3219": {
+   "job_type": "Health associate professionals not elsewhere classified.",
+   "skill_level": "Medium Skilled"
+  },
+  "3221": {
+   "job_type": "Youth and community workers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3222": {
+   "job_type": "Child and early years officers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3223": {
+   "job_type": "Housing officers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3224": {
+   "job_type": "Counsellors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3229": {
+   "job_type": "Welfare and housing associate professionals not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3231": {
+   "job_type": "Higher level teaching assistants",
+   "skill_level": "Medium Skilled"
+  },
+  "3232": {
+   "job_type": "Early education and childcare practitioners",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3240": {
+   "job_type": "Veterinary nurses",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3311": {
+   "job_type": "Non-commissioned officers and other ranks",
+   "skill_level": "Ineligible"
+  },
+  "3312": {
+   "job_type": "Police officers (sergeant and below)",
+   "skill_level": "Medium Skilled",
+   "going_rate": 46900,
+   "lower_going_rate": 36700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25700
+  },
+  "3313": {
+   "job_type": "Fire service officers (watch manager and below)",
+   "skill_level": "Medium Skilled",
+   "going_rate": 42100,
+   "lower_going_rate": 37600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 26300
+  },
+  "3314": {
+   "job_type": "Prison service officers (below principal officer)",
+   "skill_level": "Medium Skilled",
+   "going_rate": 38800,
+   "lower_going_rate": 31600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3319": {
+   "job_type": "Protective service associate professionals not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 41100,
+   "lower_going_rate": 33200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3411": {
+   "job_type": "Artists",
+   "skill_level": "Medium Skilled",
+   "going_rate": 38200,
+   "lower_going_rate": 26600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Artists – all jobs",
+    "areas": "UK wide",
+    "rate": 38200,
+    "lower_rate": 26600
+   }
+  },
+  "3412": {
+   "job_type": "Authors, writers and translators",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36100,
+   "lower_going_rate": 29800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Authors, writers and translators",
+    "rate": 36100,
+    "lower_rate": 29800
+   }
+  },
+  "3413": {
+   "job_type": "Actors, entertainers and presenters",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3414": {
+   "job_type": "Dancers and choreographers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 28500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Dancers and choreographers – only skilled classical ballet dancers or skilled contemporary dancers who meet the standard required by internationally recognised UK ballet or contemporary dance companies. The company must be endorsed as being internationally recognised by a UK industry body such as the Arts Councils (of England, Scotland or Wales).",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 28500
+   },
+   "temporary_shortage_list": {
+    "job_types": "Dancers and choreographers",
+    "rate": 33400,
+    "lower_rate": 28500
+   }
+  },
+  "3415": {
+   "job_type": "Musicians",
+   "skill_level": "Higher Skilled",
+   "going_rate": 37500,
+   "lower_going_rate": 30100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Musicians – only skilled orchestral musicians who are leaders, principals, sub-principals or numbered string positions, and who meet the standard required by internationally recognised UK orchestras. The orchestra must be a full member of the Association of British Orchestras.",
+    "areas": "UK wide",
+    "rate": 37500,
+    "lower_rate": 30100
+   }
+  },
+  "3416": {
+   "job_type": "Arts officers, producers and directors",
+   "skill_level": "Higher Skilled",
+   "going_rate": 38100,
+   "lower_going_rate": 28800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Arts officers, producers and directors – all jobs",
+    "areas": "UK wide",
+    "rate": 38100,
+    "lower_rate": 28800
+   }
+  },
+  "3417": {
+   "job_type": "Photographers, audio-visual and broadcasting equipment operators",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Photographers, audio-visual and broadcasting equipment operators",
+    "rate": 33400,
+    "lower_rate": 25400
+   }
+  },
+  "3421": {
+   "job_type": "Interior designers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35200,
+   "lower_going_rate": 29600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3422": {
+   "job_type": "Clothing, fashion and accessories designers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36500,
+   "lower_going_rate": 29100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Clothing, fashion and accessories designers",
+    "rate": 36500,
+    "lower_rate": 29100
+   }
+  },
+  "3429": {
+   "job_type": "Design occupations not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 39300,
+   "lower_going_rate": 29800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Design occupations not elsewhere classified – only the following job types: / / - Industrial and product designers / / - Packaging designers / / - Performance make-up artists / / - Set designers / / - Visual merchandising managers and designers",
+    "rate": 39300,
+    "lower_rate": 29800
+   }
+  },
+  "3431": {
+   "job_type": "Sports players",
+   "skill_level": "Ineligible"
+  },
+  "3432": {
+   "job_type": "Sports coaches, instructors and officials",
+   "skill_level": "Ineligible"
+  },
+  "3433": {
+   "job_type": "Fitness and wellbeing instructors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3511": {
+   "job_type": "Aircraft pilots and air traffic controllers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 80400,
+   "lower_going_rate": 64100,
+   "new_entrant_rate": 56300,
+   "new_entrant_lower_rate": 44900
+  },
+  "3512": {
+   "job_type": "Ship and hovercraft officers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 58300,
+   "lower_going_rate": 39100,
+   "new_entrant_rate": 40800,
+   "new_entrant_lower_rate": 27300,
+   "temporary_shortage_list": {
+    "job_types": "Ship and hovercraft officers",
+    "rate": 58300,
+    "lower_rate": 39100
+   }
+  },
+  "3520": {
+   "job_type": "Legal associate professionals",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Legal associate professionals",
+    "rate": 33400,
+    "lower_rate": 26400
+   }
+  },
+  "3531": {
+   "job_type": "Brokers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 52400,
+   "lower_going_rate": 40000,
+   "new_entrant_rate": 36700,
+   "new_entrant_lower_rate": 28000
+  },
+  "3532": {
+   "job_type": "Insurance underwriters",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36500,
+   "lower_going_rate": 29800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Insurance underwriters",
+    "rate": 36500,
+    "lower_rate": 29800
+   }
+  },
+  "3533": {
+   "job_type": "Financial and accounting technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 48700,
+   "lower_going_rate": 32900,
+   "new_entrant_rate": 34100,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Financial and accounting technicians",
+    "rate": 48700,
+    "lower_rate": 32900
+   }
+  },
+  "3534": {
+   "job_type": "Financial accounts managers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 44700,
+   "lower_going_rate": 34800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3541": {
+   "job_type": "Estimators, valuers and assessors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35300,
+   "lower_going_rate": 28600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Estimators, valuers and assessors",
+    "rate": 35300,
+    "lower_rate": 28600
+   }
+  },
+  "3542": {
+   "job_type": "Importers and exporters",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35700,
+   "lower_going_rate": 29800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3543": {
+   "job_type": "Project support officers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33900,
+   "lower_going_rate": 28900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3544": {
+   "job_type": "Data analysts",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34900,
+   "lower_going_rate": 28600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Data analysts",
+    "rate": 34900,
+    "lower_rate": 28600
+   }
+  },
+  "3549": {
+   "job_type": "Business associate professionals not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Business associate professionals not elsewhere classified – only the following job types: / / - Business support officers / / - Business systems analysts / / - Contract administrators / / - Clinical coders / / - Clinical trials administrators / / - Research coordinators",
+    "rate": 33400,
+    "lower_rate": 25500
+   }
+  },
+  "3551": {
+   "job_type": "Buyers and procurement officers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35500,
+   "lower_going_rate": 29300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3552": {
+   "job_type": "Business sales executives",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36700,
+   "lower_going_rate": 29300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Business sales executives",
+    "rate": 36700,
+    "lower_rate": 29300
+   }
+  },
+  "3553": {
+   "job_type": "Merchandisers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3554": {
+   "job_type": "Advertising and marketing associate professionals",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Advertising and marketing associate professionals",
+    "rate": 33400,
+    "lower_rate": 26300
+   }
+  },
+  "3555": {
+   "job_type": "Estate agents and auctioneers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3556": {
+   "job_type": "Sales accounts and business development managers",
+   "skill_level": "Higher Skilled",
+   "going_rate": 55200,
+   "lower_going_rate": 40500,
+   "new_entrant_rate": 38600,
+   "new_entrant_lower_rate": 28300
+  },
+  "3557": {
+   "job_type": "Events managers and organisers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3560": {
+   "job_type": "Public services associate professionals",
+   "skill_level": "Medium Skilled",
+   "going_rate": 39500,
+   "lower_going_rate": 34000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3571": {
+   "job_type": "Human resources and industrial relations officers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Human resources and industrial relations officers",
+    "rate": 33400,
+    "lower_rate": 27100
+   }
+  },
+  "3572": {
+   "job_type": "Careers advisers and vocational guidance specialists",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3573": {
+   "job_type": "Information technology trainers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 40000,
+   "lower_going_rate": 32100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Information technology trainers",
+    "rate": 40000,
+    "lower_rate": 32100
+   }
+  },
+  "3574": {
+   "job_type": "Other vocational and industrial trainers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34500,
+   "lower_going_rate": 28200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3581": {
+   "job_type": "Inspectors of standards and regulations",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34400,
+   "lower_going_rate": 30000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "3582": {
+   "job_type": "Health and safety managers and officers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 42500,
+   "lower_going_rate": 34800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4111": {
+   "job_type": "National government administrative occupations",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4112": {
+   "job_type": "Local government administrative occupations",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4113": {
+   "job_type": "Officers of non-governmental organisations",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4121": {
+   "job_type": "Credit controllers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Credit controllers",
+    "rate": 33400,
+    "lower_rate": 25200
+   }
+  },
+  "4122": {
+   "job_type": "Book-keepers, payroll managers and wages clerks",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Book-keepers, payroll managers and wages clerks",
+    "rate": 33400,
+    "lower_rate": 25400
+   }
+  },
+  "4123": {
+   "job_type": "Bank and post office clerks",
+   "skill_level": "Ineligible"
+  },
+  "4124": {
+   "job_type": "Finance officers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4129": {
+   "job_type": "Financial administrative occupations not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Financial administrative occupations not elsewhere classified – only the following job types: / / - Box office assistants / / - Grants officers / / - Mortgage administrators / / - Revenue assistants (excludes National and Local government revenue occupations) / / - Treasury assistants",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "4131": {
+   "job_type": "Records clerks and assistants",
+   "skill_level": "Ineligible"
+  },
+  "4132": {
+   "job_type": "Pensions and insurance clerks and assistants",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Pensions and insurance clerks and assistants",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "4133": {
+   "job_type": "Stock control clerks and assistants",
+   "skill_level": "Ineligible"
+  },
+  "4134": {
+   "job_type": "Transport and distribution clerks and assistants",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4135": {
+   "job_type": "Library clerks and assistants",
+   "skill_level": "Ineligible"
+  },
+  "4136": {
+   "job_type": "Human resources administrative occupations",
+   "skill_level": "Ineligible"
+  },
+  "4141": {
+   "job_type": "Office managers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 37400,
+   "lower_going_rate": 30000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4142": {
+   "job_type": "Office supervisors",
+   "skill_level": "Ineligible"
+  },
+  "4143": {
+   "job_type": "Customer service managers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35200,
+   "lower_going_rate": 27600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4151": {
+   "job_type": "Sales administrators",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4152": {
+   "job_type": "Data entry administrators",
+   "skill_level": "Ineligible"
+  },
+  "4159": {
+   "job_type": "Other administrative occupations not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4211": {
+   "job_type": "Medical secretaries",
+   "skill_level": "Ineligible"
+  },
+  "4212": {
+   "job_type": "Legal secretaries",
+   "skill_level": "Ineligible"
+  },
+  "4213": {
+   "job_type": "School secretaries",
+   "skill_level": "Ineligible"
+  },
+  "4214": {
+   "job_type": "Company secretaries and administrators",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4215": {
+   "job_type": "Personal assistants and other secretaries",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "4216": {
+   "job_type": "Receptionists",
+   "skill_level": "Ineligible"
+  },
+  "4217": {
+   "job_type": "Typists and related keyboard occupations",
+   "skill_level": "Ineligible"
+  },
+  "5111": {
+   "job_type": "Farmers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34100,
+   "lower_going_rate": 28200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5112": {
+   "job_type": "Horticultural trades",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5113": {
+   "job_type": "Gardeners and landscape gardeners",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5114": {
+   "job_type": "Groundsmen and greenkeepers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5119": {
+   "job_type": "Agricultural and fishing trades not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Agriculture and fishing trades not elsewhere classified – only jobs in the fishing industry",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "5211": {
+   "job_type": "Sheet metal workers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5212": {
+   "job_type": "Metal plate workers, smiths, moulders and related occupations",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36700,
+   "lower_going_rate": 29200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5213": {
+   "job_type": "Welding trades",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34900,
+   "lower_going_rate": 29500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Welding trades – only high integrity pipe welders, where the job requires 3 or more years’ related on-the-job experience. This experience must not have been gained through working illegally.",
+    "areas": "UK wide",
+    "rate": 34900,
+    "lower_rate": 29500
+   },
+   "temporary_shortage_list": {
+    "job_types": "Welding trades",
+    "rate": 34900,
+    "lower_rate": 29500
+   }
+  },
+  "5214": {
+   "job_type": "Pipe fitters",
+   "skill_level": "Medium Skilled",
+   "going_rate": 46000,
+   "lower_going_rate": 40400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 28300,
+   "temporary_shortage_list": {
+    "job_types": "Pipe fitters",
+    "rate": 46000,
+    "lower_rate": 40400
+   }
+  },
+  "5221": {
+   "job_type": "Metal machining setters and setter-operators",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34600,
+   "lower_going_rate": 28500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5222": {
+   "job_type": "Tool makers, tool fitters and markers-out",
+   "skill_level": "Medium Skilled",
+   "going_rate": 38400,
+   "lower_going_rate": 33400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5223": {
+   "job_type": "Metal working production and maintenance fitters",
+   "skill_level": "Medium Skilled",
+   "going_rate": 39300,
+   "lower_going_rate": 29900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Metal working production and maintenance fitters",
+    "rate": 39300,
+    "lower_rate": 29900
+   }
+  },
+  "5224": {
+   "job_type": "Precision instrument makers and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 28300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5225": {
+   "job_type": "Air-conditioning and refrigeration installers and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 41100,
+   "lower_going_rate": 35500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Air-conditioning and refrigeration installers and repairers",
+    "rate": 41100,
+    "lower_rate": 35500
+   }
+  },
+  "5231": {
+   "job_type": "Vehicle technicians, mechanics and electricians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35500,
+   "lower_going_rate": 27900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Vehicle technicians, mechanics and electricians",
+    "rate": 35500,
+    "lower_rate": 27900
+   }
+  },
+  "5232": {
+   "job_type": "Vehicle body builders and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Vehicle body builders and repairers",
+    "rate": 33400,
+    "lower_rate": 27600
+   }
+  },
+  "5233": {
+   "job_type": "Vehicle paint technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 29600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Vehicle paint technicians",
+    "rate": 33400,
+    "lower_rate": 29600
+   }
+  },
+  "5234": {
+   "job_type": "Aircraft maintenance and related trades",
+   "skill_level": "Medium Skilled",
+   "going_rate": 45000,
+   "lower_going_rate": 34800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5235": {
+   "job_type": "Boat and ship builders and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33700,
+   "lower_going_rate": 29600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Boat and ship builders and repairers – all jobs",
+    "areas": "Scotland only",
+    "rate": 33700,
+    "lower_rate": 29600
+   },
+   "temporary_shortage_list": {
+    "job_types": "Boat and ship builders and repairers",
+    "rate": 33700,
+    "lower_rate": 29600
+   }
+  },
+  "5236": {
+   "job_type": "Rail and rolling stock builders and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 57000,
+   "lower_going_rate": 38800,
+   "new_entrant_rate": 39900,
+   "new_entrant_lower_rate": 27100
+  },
+  "5241": {
+   "job_type": "Electricians and electrical fitters",
+   "skill_level": "Medium Skilled",
+   "going_rate": 38800,
+   "lower_going_rate": 31500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Electricians and electrical fitters",
+    "rate": 38800,
+    "lower_rate": 31500
+   }
+  },
+  "5242": {
+   "job_type": "Telecoms and related network installers and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36700,
+   "lower_going_rate": 31700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Telecoms and related network installers and repairers",
+    "rate": 36700,
+    "lower_rate": 31700
+   }
+  },
+  "5243": {
+   "job_type": "Tv, video and audio servicers and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5244": {
+   "job_type": "Computer system and equipment installers and servicers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35100,
+   "lower_going_rate": 26700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Computer system and equipment installers and servicers",
+    "rate": 35100,
+    "lower_rate": 26700
+   }
+  },
+  "5245": {
+   "job_type": "Security system installers and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 36300,
+   "lower_going_rate": 28800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Security system installers and repairers",
+    "rate": 36300,
+    "lower_rate": 28800
+   }
+  },
+  "5246": {
+   "job_type": "Electrical service and maintenance mechanics and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 39700,
+   "lower_going_rate": 33800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5249": {
+   "job_type": "Electrical and electronic trades not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 45800,
+   "lower_going_rate": 35600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Electrical and electronic trades not elsewhere classified",
+    "rate": 45800,
+    "lower_rate": 35600
+   }
+  },
+  "5250": {
+   "job_type": "Skilled metal, electrical and electronic trades supervisors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 42400,
+   "lower_going_rate": 36500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25600
+  },
+  "5311": {
+   "job_type": "Steel erectors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 35000,
+   "lower_going_rate": 29500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Steel erectors",
+    "rate": 35000,
+    "lower_rate": 29500
+   }
+  },
+  "5312": {
+   "job_type": "Stonemasons and related trades",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 28500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Stonemasons and related trades – all jobs",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 28500
+   }
+  },
+  "5313": {
+   "job_type": "Bricklayers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Bricklayers – all jobs",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "5314": {
+   "job_type": "Roofers, roof tilers and slaters",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Roofers, roof tilers and slaters – all jobs",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "5315": {
+   "job_type": "Plumbers and heating and ventilating installers and repairers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 38100,
+   "lower_going_rate": 31400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Plumbers and heating and ventilating installers and repairers",
+    "rate": 38100,
+    "lower_rate": 31400
+   }
+  },
+  "5316": {
+   "job_type": "Carpenters and joiners",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Carpenters and joiners – all jobs",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 27800
+   }
+  },
+  "5317": {
+   "job_type": "Glaziers, window fabricators and fitters",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5319": {
+   "job_type": "Construction and building trades not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Construction and building trades not elsewhere classified – only retrofitters",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 27300
+   },
+   "temporary_shortage_list": {
+    "job_types": "Construction and building trades not elsewhere classified – only the following job types: / / - Builders / / - Divers / / - Fence erectors / / - Industrial climbers / / - Remotely Operated Vehicle (ROV) operators / / - Steel fixers and underpinners",
+    "rate": 33400,
+    "lower_rate": 27300
+   }
+  },
+  "5321": {
+   "job_type": "Plasterers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34200,
+   "lower_going_rate": 29500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5322": {
+   "job_type": "Floorers and wall tilers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Floorers and wall tilers",
+    "rate": 33400,
+    "lower_rate": 25400
+   }
+  },
+  "5323": {
+   "job_type": "Painters and decorators",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Painters and decorators",
+    "rate": 33400,
+    "lower_rate": 27800
+   }
+  },
+  "5330": {
+   "job_type": "Construction and building trades supervisors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 41800,
+   "lower_going_rate": 34600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Construction and building trades supervisors",
+    "rate": 41800,
+    "lower_rate": 34600
+   }
+  },
+  "5411": {
+   "job_type": "Upholsterers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5412": {
+   "job_type": "Footwear and leather working trades",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5413": {
+   "job_type": "Tailors and dressmakers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5419": {
+   "job_type": "Textiles, garments and related trades not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5421": {
+   "job_type": "Pre-press technicians",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5422": {
+   "job_type": "Printers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5423": {
+   "job_type": "Print finishing and binding workers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5431": {
+   "job_type": "Butchers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5432": {
+   "job_type": "Bakers and flour confectioners",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5433": {
+   "job_type": "Fishmongers and poultry dressers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5434": {
+   "job_type": "Chefs",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5435": {
+   "job_type": "Cooks",
+   "skill_level": "Ineligible"
+  },
+  "5436": {
+   "job_type": "Catering and bar managers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5441": {
+   "job_type": "Glass and ceramics makers, decorators and finishers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5442": {
+   "job_type": "Furniture makers and other craft woodworkers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5443": {
+   "job_type": "Florists",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "5449": {
+   "job_type": "Other skilled trades not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25800,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "6111": {
+   "job_type": "Early education and childcare assistants",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "6112": {
+   "job_type": "Teaching assistants",
+   "skill_level": "Medium Skilled"
+  },
+  "6113": {
+   "job_type": "Educational support assistants",
+   "skill_level": "Medium Skilled"
+  },
+  "6114": {
+   "job_type": "Childminders",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "6116": {
+   "job_type": "Nannies and au pairs",
+   "skill_level": "Medium Skilled– extending in same occupation only",
+   "going_rate": null,
+   "going_rate_note": "Not eligible for standard rate applications",
+   "lower_going_rate": 25000,
+   "new_entrant_lower_rate": 25000
+  },
+  "6117": {
+   "job_type": "Playworkers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "6121": {
+   "job_type": "Pest control officers",
+   "skill_level": "Ineligible"
+  },
+  "6129": {
+   "job_type": "Animal care services occupations not elsewhere classified",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Animal care services occupations not elsewhere classified – only racing grooms, stallion handlers, stud grooms, stud hands, stud handlers and work riders",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "6131": {
+   "job_type": "Nursing auxiliaries and assistants",
+   "skill_level": "Medium Skilled",
+   "immigration_salary_list": {
+    "job_types": "Nursing auxiliaries and assistants – all jobs. Note: For Skilled Worker purposes, SOC 2020 occupation code 6131 only applies to roles in environments where registered nurse or other registered healthcare professional roles also exist.",
+    "areas": "UK wide",
+    "rate": 25000,
+    "lower_rate": 25000
+   }
+  },
+  "6132": {
+   "job_type": "Ambulance staff (excluding paramedics)",
+   "skill_level": "Medium Skilled"
+  },
+  "6133": {
+   "job_type": "Dental nurses",
+   "skill_level": "Medium Skilled"
+  },
+  "6134": {
+   "job_type": "Houseparents and residential wardens",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "6135": {
+   "job_type": "Care workers and home carers",
+   "skill_level": "Medium Skilled – Subject to listed conditions",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Care workers and home carers – all jobs, except jobs with a working location in England are only eligible in this SOC 2020 occupation code where the sponsor holds registration with the Care Quality Commission and is currently carrying on a regulated activity. Private households or individuals (other than sole traders sponsoring someone to work for their business) cannot sponsor Skilled Worker applicants.",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "6136": {
+   "job_type": "Senior care workers",
+   "skill_level": "Medium Skilled – Subject to listed conditions",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Senior care workers – all jobs, except jobs with a working location in England are only eligible in this SOC 2020 occupation code where the sponsor holds registration with the Care Quality Commission and is currently carrying on a regulated activity.",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "6137": {
+   "job_type": "Care escorts",
+   "skill_level": "Ineligible"
+  },
+  "6138": {
+   "job_type": "Undertakers, mortuary and crematorium assistants",
+   "skill_level": "Ineligible"
+  },
+  "6211": {
+   "job_type": "Sports and leisure assistants",
+   "skill_level": "Ineligible"
+  },
+  "6212": {
+   "job_type": "Travel agents",
+   "skill_level": "Ineligible"
+  },
+  "6213": {
+   "job_type": "Air travel assistants",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "6214": {
+   "job_type": "Rail travel assistants",
+   "skill_level": "Medium Skilled",
+   "going_rate": 41300,
+   "lower_going_rate": 35400,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "6219": {
+   "job_type": "Leisure and travel service occupations not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "6221": {
+   "job_type": "Hairdressers and barbers",
+   "skill_level": "Ineligible"
+  },
+  "6222": {
+   "job_type": "Beauticians and related occupations",
+   "skill_level": "Ineligible"
+  },
+  "6231": {
+   "job_type": "Housekeepers and related occupations",
+   "skill_level": "Ineligible"
+  },
+  "6232": {
+   "job_type": "Caretakers",
+   "skill_level": "Medium Skilled– extending in same occupation only",
+   "going_rate": null,
+   "going_rate_note": "Not eligible for standard rate applications",
+   "lower_going_rate": 25000,
+   "new_entrant_lower_rate": 25000
+  },
+  "6240": {
+   "job_type": "Cleaning and housekeeping managers and supervisors",
+   "skill_level": "Ineligible"
+  },
+  "6250": {
+   "job_type": "Bed and breakfast and guest house owners and proprietors",
+   "skill_level": "Medium Skilled– extending in same occupation only",
+   "going_rate": null,
+   "going_rate_note": "Not eligible for standard rate applications",
+   "lower_going_rate": 25000,
+   "new_entrant_lower_rate": 25000
+  },
+  "6311": {
+   "job_type": "Police community support officers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 31600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "6312": {
+   "job_type": "Parking and civil enforcement occupations",
+   "skill_level": "Ineligible"
+  },
+  "7111": {
+   "job_type": "Sales and retail assistants",
+   "skill_level": "Ineligible"
+  },
+  "7112": {
+   "job_type": "Retail cashiers and check-out operators",
+   "skill_level": "Ineligible"
+  },
+  "7113": {
+   "job_type": "Telephone salespersons",
+   "skill_level": "Ineligible"
+  },
+  "7114": {
+   "job_type": "Pharmacy and optical dispensing assistants",
+   "skill_level": "Ineligible"
+  },
+  "7115": {
+   "job_type": "Vehicle and parts salespersons and advisers",
+   "skill_level": "Medium Skilled– extending in same occupation only",
+   "going_rate": null,
+   "going_rate_note": "Not eligible for standard rate applications",
+   "lower_going_rate": 25000,
+   "new_entrant_lower_rate": 25000
+  },
+  "7121": {
+   "job_type": "Collector salespersons and credit agents",
+   "skill_level": "Ineligible"
+  },
+  "7122": {
+   "job_type": "Debt, rent and other cash collectors",
+   "skill_level": "Ineligible"
+  },
+  "7123": {
+   "job_type": "Roundspersons and van salespersons",
+   "skill_level": "Ineligible"
+  },
+  "7124": {
+   "job_type": "Market and street traders and assistants",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "7125": {
+   "job_type": "Visual merchandisers and related occupations",
+   "skill_level": "Medium Skilled– extending in same occupation only",
+   "going_rate": null,
+   "going_rate_note": "Not eligible for standard rate applications",
+   "lower_going_rate": 25000,
+   "new_entrant_lower_rate": 25000
+  },
+  "7129": {
+   "job_type": "Sales related occupations not elsewhere classified.",
+   "skill_level": "Medium Skilled– extending in same occupation only",
+   "going_rate": null,
+   "going_rate_note": "Not eligible for standard rate applications",
+   "lower_going_rate": 25000,
+   "new_entrant_lower_rate": 25000
+  },
+  "7131": {
+   "job_type": "Shopkeepers and owners - retail and wholesale",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33700,
+   "lower_going_rate": 27200,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "7132": {
+   "job_type": "Sales supervisors - retail and wholesale",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "7211": {
+   "job_type": "Call and contact centre occupations",
+   "skill_level": "Ineligible"
+  },
+  "7212": {
+   "job_type": "Telephonists",
+   "skill_level": "Ineligible"
+  },
+  "7213": {
+   "job_type": "Communication operators",
+   "skill_level": "Ineligible"
+  },
+  "7214": {
+   "job_type": "Market research interviewers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "7219": {
+   "job_type": "Customer service occupations not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "7220": {
+   "job_type": "Customer service supervisors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 34200,
+   "lower_going_rate": 28900,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "8111": {
+   "job_type": "Food, drink and tobacco process operatives",
+   "skill_level": "Ineligible"
+  },
+  "8112": {
+   "job_type": "Textile process operatives",
+   "skill_level": "Ineligible"
+  },
+  "8113": {
+   "job_type": "Chemical and related process operatives",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26700,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "8114": {
+   "job_type": "Plastics process operatives",
+   "skill_level": "Ineligible"
+  },
+  "8115": {
+   "job_type": "Metal making and treating process operatives",
+   "skill_level": "Medium Skilled– extending in same occupation only",
+   "going_rate": null,
+   "going_rate_note": "Not eligible for standard rate applications",
+   "lower_going_rate": 25000,
+   "new_entrant_lower_rate": 25000
+  },
+  "8119": {
+   "job_type": "Process operatives not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "8120": {
+   "job_type": "Metal working machine operatives",
+   "skill_level": "Ineligible"
+  },
+  "8131": {
+   "job_type": "Paper and wood machine operatives",
+   "skill_level": "Ineligible"
+  },
+  "8132": {
+   "job_type": "Mining and quarry workers and related operatives",
+   "skill_level": "Ineligible"
+  },
+  "8133": {
+   "job_type": "Energy plant operatives",
+   "skill_level": "Medium Skilled",
+   "going_rate": 41500,
+   "lower_going_rate": 30100,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "temporary_shortage_list": {
+    "job_types": "Energy plant operatives",
+    "rate": 41500,
+    "lower_rate": 30100
+   }
+  },
+  "8134": {
+   "job_type": "Water and sewerage plant operatives",
+   "skill_level": "Medium Skilled",
+   "going_rate": 38000,
+   "lower_going_rate": 31300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "8135": {
+   "job_type": "Printing machine assistants",
+   "skill_level": "Ineligible"
+  },
+  "8139": {
+   "job_type": "Plant and machine operatives not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "8141": {
+   "job_type": "Assemblers (electrical and electronic products)",
+   "skill_level": "Ineligible"
+  },
+  "8142": {
+   "job_type": "Assemblers (vehicles and metal goods)",
+   "skill_level": "Ineligible"
+  },
+  "8143": {
+   "job_type": "Routine inspectors and testers",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 26600,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "8144": {
+   "job_type": "Weighers, graders and sorters",
+   "skill_level": "Ineligible"
+  },
+  "8145": {
+   "job_type": "Tyre, exhaust and windscreen fitters",
+   "skill_level": "Ineligible"
+  },
+  "8146": {
+   "job_type": "Sewing machinists",
+   "skill_level": "Ineligible"
+  },
+  "8149": {
+   "job_type": "Assemblers and routine operatives not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "8151": {
+   "job_type": "Scaffolders, stagers and riggers",
+   "skill_level": "Ineligible"
+  },
+  "8152": {
+   "job_type": "Road construction operatives",
+   "skill_level": "Ineligible"
+  },
+  "8153": {
+   "job_type": "Rail construction and maintenance operatives",
+   "skill_level": "Ineligible"
+  },
+  "8159": {
+   "job_type": "Construction operatives not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "8160": {
+   "job_type": "Production, factory and assembly supervisors",
+   "skill_level": "Ineligible"
+  },
+  "8211": {
+   "job_type": "Heavy and large goods vehicle drivers",
+   "skill_level": "Ineligible"
+  },
+  "8212": {
+   "job_type": "Bus and coach drivers",
+   "skill_level": "Ineligible"
+  },
+  "8213": {
+   "job_type": "Taxi and cab drivers and chauffeurs",
+   "skill_level": "Ineligible"
+  },
+  "8214": {
+   "job_type": "Delivery drivers and couriers",
+   "skill_level": "Ineligible"
+  },
+  "8215": {
+   "job_type": "Driving instructors",
+   "skill_level": "Medium Skilled",
+   "going_rate": 39500,
+   "lower_going_rate": 33300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "8219": {
+   "job_type": "Road transport drivers not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "8221": {
+   "job_type": "Crane drivers",
+   "skill_level": "Ineligible"
+  },
+  "8222": {
+   "job_type": "Fork-lift truck drivers",
+   "skill_level": "Ineligible"
+  },
+  "8229": {
+   "job_type": "Mobile machine drivers and operatives not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "8231": {
+   "job_type": "Train and tram drivers",
+   "skill_level": "Ineligible"
+  },
+  "8232": {
+   "job_type": "Marine and waterways transport operatives",
+   "skill_level": "Medium Skilled",
+   "going_rate": 38300,
+   "lower_going_rate": 26300,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "8233": {
+   "job_type": "Air transport operatives",
+   "skill_level": "Ineligible"
+  },
+  "8234": {
+   "job_type": "Rail transport operatives",
+   "skill_level": "Ineligible"
+  },
+  "8239": {
+   "job_type": "Other drivers and transport operatives not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "9111": {
+   "job_type": "Farm workers",
+   "skill_level": "Ineligible"
+  },
+  "9112": {
+   "job_type": "Forestry and related workers",
+   "skill_level": "Ineligible"
+  },
+  "9119": {
+   "job_type": "Fishing and other elementary agriculture occupations not elsewhere classified.",
+   "skill_level": "Medium Skilled – ONLY Vent chick sexer or Deckhand on large fishing vessel (9 metres and above)",
+   "going_rate": 33400,
+   "lower_going_rate": 25000,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000,
+   "immigration_salary_list": {
+    "job_types": "Fishing and other elementary agriculture occupations not elsewhere classified – only deckhands on large fishing vessels (9 metres and above) where the job requires the worker to have at least 3 years’ full-time experience in using their skills. This experience must not have been gained through working illegally.",
+    "areas": "UK wide",
+    "rate": 33400,
+    "lower_rate": 25000
+   }
+  },
+  "9121": {
+   "job_type": "Groundworkers",
+   "skill_level": "Ineligible"
+  },
+  "9129": {
+   "job_type": "Elementary construction occupations not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "9131": {
+   "job_type": "Industrial cleaning process occupations",
+   "skill_level": "Ineligible"
+  },
+  "9132": {
+   "job_type": "Packers, bottlers, canners and fillers",
+   "skill_level": "Ineligible"
+  },
+  "9139": {
+   "job_type": "Elementary process plant occupations not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "9211": {
+   "job_type": "Postal workers, mail sorters and messengers",
+   "skill_level": "Ineligible"
+  },
+  "9219": {
+   "job_type": "Elementary administration occupations not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "9221": {
+   "job_type": "Window cleaners",
+   "skill_level": "Ineligible"
+  },
+  "9222": {
+   "job_type": "Street cleaners",
+   "skill_level": "Ineligible"
+  },
+  "9223": {
+   "job_type": "Cleaners and domestics",
+   "skill_level": "Ineligible"
+  },
+  "9224": {
+   "job_type": "Launderers, dry cleaners and pressers",
+   "skill_level": "Ineligible"
+  },
+  "9225": {
+   "job_type": "Refuse and salvage occupations",
+   "skill_level": "Ineligible"
+  },
+  "9226": {
+   "job_type": "Vehicle valeters and cleaners",
+   "skill_level": "Ineligible"
+  },
+  "9229": {
+   "job_type": "Elementary cleaning occupations not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "9231": {
+   "job_type": "Security guards and related occupations",
+   "skill_level": "Ineligible"
+  },
+  "9232": {
+   "job_type": "School midday and crossing patrol occupations",
+   "skill_level": "Ineligible"
+  },
+  "9233": {
+   "job_type": "Exam invigilators",
+   "skill_level": "Ineligible"
+  },
+  "9241": {
+   "job_type": "Shelf fillers",
+   "skill_level": "Ineligible"
+  },
+  "9249": {
+   "job_type": "Elementary sales occupations not elsewhere classified.",
+   "skill_level": "Medium Skilled",
+   "going_rate": 33400,
+   "lower_going_rate": 27500,
+   "new_entrant_rate": 33400,
+   "new_entrant_lower_rate": 25000
+  },
+  "9251": {
+   "job_type": "Elementary storage supervisors",
+   "skill_level": "Ineligible"
+  },
+  "9252": {
+   "job_type": "Warehouse operatives",
+   "skill_level": "Medium Skilled– extending in same occupation only",
+   "going_rate": null,
+   "going_rate_note": "Not eligible for standard rate applications",
+   "lower_going_rate": 25000,
+   "new_entrant_lower_rate": 25000
+  },
+  "9253": {
+   "job_type": "Delivery operatives",
+   "skill_level": "Ineligible"
+  },
+  "9259": {
+   "job_type": "Elementary storage occupations not elsewhere classified.",
+   "skill_level": "Ineligible"
+  },
+  "9261": {
+   "job_type": "Bar and catering supervisors",
+   "skill_level": "Ineligible"
+  },
+  "9262": {
+   "job_type": "Hospital porters",
+   "skill_level": "Ineligible"
+  },
+  "9263": {
+   "job_type": "Kitchen and catering assistants",
+   "skill_level": "Ineligible"
+  },
+  "9264": {
+   "job_type": "Waiters and waitresses",
+   "skill_level": "Ineligible"
+  },
+  "9265": {
+   "job_type": "Bar staff",
+   "skill_level": "Ineligible"
+  },
+  "9266": {
+   "job_type": "Coffee shop workers",
+   "skill_level": "Ineligible"
+  },
+  "9267": {
+   "job_type": "Leisure and theme park attendants",
+   "skill_level": "Ineligible"
+  },
+  "9269": {
+   "job_type": "Other elementary services occupations not elsewhere classified.",
+   "skill_level": "Ineligible"
+  }
+ }
+}
