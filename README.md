@@ -2,7 +2,8 @@
 
 **Can this UK employer sponsor my visa?** Ask Claude, get an answer from the official Home Office register in seconds.
 
-`sponsor-check` is an MCP server and command-line tool that checks employers against the
+`sponsor-check` is an MCP server, command-line tool and (in progress) web app that checks
+employers against the
 [Register of licensed sponsors: workers](https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers),
 which UK Visas and Immigration republishes almost every working day. It also checks a salary
 against the published Skilled Worker thresholds and going rates.
@@ -112,6 +113,39 @@ entrant, PhD, immigration salary list and temporary shortage list rates.
 Refresh the data after a rules change with `python scripts/refresh_thresholds.py`, then commit
 the diff. The script fails loudly rather than writing a half-empty file if a page changes shape.
 
+## Web app
+
+A React frontend is taking shape in [`web/`](web/), talking to a small FastAPI wrapper
+(`src/sponsor_check/api.py`) over the same `register.py`/`salary.py` logic the CLI and MCP
+server use, so all three surfaces always agree.
+
+```bash
+pip install -e ".[dev]"
+sponsor-check-api          # http://127.0.0.1:8000
+
+cd web
+npm install
+npm run dev                # http://localhost:5173, proxies /api to the server above
+```
+
+See [`web/README.md`](web/README.md) for more.
+
+### Deploying
+
+The [`Dockerfile`](Dockerfile) builds everything into one container: FastAPI serves `/api` and
+the built frontend from the same origin, so no CORS setup is needed. The register is downloaded
+at build time, so a cold start serves straight away, and the running server refreshes it in the
+background once it is more than 24 hours old.
+
+```bash
+docker build -t sponsor-check .
+docker run -p 8000:8000 sponsor-check     # http://localhost:8000
+```
+
+[`render.yaml`](render.yaml) deploys it to Render's free tier: in the Render dashboard choose
+**New > Blueprint** and pick this repository. Free services sleep when idle, so the first visit
+after a quiet spell takes a little while to wake up.
+
 ## Development
 
 ```bash
@@ -127,6 +161,7 @@ GOV.UK at build time.
 ## Roadmap
 
 - [x] Salary check against Skilled Worker thresholds by occupation code
+- [ ] Web app: FastAPI + React frontend in `web/`, deployable to Render (see Deploying)
 - [ ] `check_job` tool: extract employer and salary from a pasted job ad, run both checks
 - [ ] Companies House lookup to resolve brand names to legal entities
 - [ ] Publish to PyPI and the MCP registry

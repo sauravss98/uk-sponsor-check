@@ -1,0 +1,8 @@
+# Render Blueprint: New + > Blueprint > pick this repo. Builds the Dockerfile on every push.
+services:
+  - type: web
+    name: sponsor-check
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true

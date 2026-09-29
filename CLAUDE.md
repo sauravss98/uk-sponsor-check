@@ -25,6 +25,9 @@ sponsor-check search "query" -n 10 --json
 sponsor-check salary 45000 2136  # salary vs threshold + going rate; exit 0 only when it meets
 python scripts/refresh_thresholds.py   # rebuild thresholds.json from GOV.UK (needs internet)
 npx @modelcontextprotocol/inspector sponsor-check-mcp   # poke the MCP tools by hand
+sponsor-check-api                # FastAPI backend for the web app, http://127.0.0.1:8000
+cd web && npm install && npm run dev   # React frontend, http://localhost:5173 (proxies /api)
+docker build -t sponsor-check . && docker run -p 8000:8000 sponsor-check   # prod container
 ```
 
 Always run `pytest -q` and `ruff check .` after a change. Both must pass before you say you're done.
@@ -40,11 +43,14 @@ src/sponsor_check/
   data/thresholds.json   generated: general thresholds, going rates, discounts, per-SOC data
   cli.py         argparse CLI
   server.py      MCP server (4 read-only tools)
+  api.py         FastAPI backend for the web app (thin: no logic, just JSON over register.py/salary.py)
 scripts/
   refresh_thresholds.py   scrapes GOV.UK to regenerate data/thresholds.json (dev only)
 tests/
   fixtures/register_sample.csv   real register rows + fictional "... Test" rows
-  test_normalize.py, test_register.py, test_salary.py, conftest.py (session-scoped test DB)
+  test_normalize.py, test_register.py, test_salary.py, test_api.py, conftest.py (test DB fixture)
+web/                              React (Vite + TS + Tailwind) frontend, calls api.py; see web/README.md
+Dockerfile, render.yaml          one container (API + built frontend), deployed to Render free tier
 .github/workflows/ci.yml         ruff + pytest on Python 3.10 / 3.12 / 3.13
 ```
 
@@ -85,6 +91,34 @@ tests/
   never an invented number.
 - Every salary result carries `thresholds.effective_date`, the rule that produced the figure,
   and the "confirm with the employer, this is not immigration advice" caveat.
+
+## Web API facts
+
+- `api.py` is a thin FastAPI wrapper: four endpoints (`/api/check`, `/api/search`,
+  `/api/salary`, `/api/register-info`) that call straight into `register.py`/`salary.py`, so
+  the CLI, MCP server and web app can never disagree. Don't add matching or salary logic here;
+  add it to `register.py`/`salary.py` and let this file stay thin.
+- The register is provided through a `get_register()` FastAPI dependency (same
+  lazy-singleton pattern as `server.py`'s `_register()`), so `test_api.py` can override it with
+  `app.dependency_overrides` and point it at the fixture DB instead of the real cache. Follow
+  that pattern for any new endpoint that needs the register.
+- CORS is explicit and allowlist-based (`SPONSOR_CHECK_CORS_ORIGINS`, comma-separated; defaults
+  to the Vite dev origins). This is the one surface here that's meant to be reachable from a
+  browser, unlike the MCP server (stdio) and the CLI, so don't relax it to `*`.
+- `pyproject.toml`'s `api` extra (fastapi, uvicorn) is required for `api.py`; `dev` depends on
+  it (`sponsor-check[api]`) so `pip install -e ".[dev]"` still installs everything needed to
+  run the test suite, including `test_api.py`.
+- `api.py` holds the live register in `_default_register()`, not an `lru_cache`: a
+  long-running server must pick up the daily register. It starts a background
+  `ensure_database()` at most hourly and swaps in a new `Register` when the DB file's mtime
+  changes. Requests never wait on GOV.UK, except the very first one when no DB exists.
+- Production is one Docker container: `SPONSOR_CHECK_WEB_DIR` makes `api.py` mount the built
+  frontend at `/` (mounted last, so `/api` routes win). `PORT` (set by Render) overrides
+  `SPONSOR_CHECK_API_PORT`. The register is baked into the image at build time.
+- The web app (`web/`) is a separate Vite/React/TypeScript project, not part of the Python
+  package. Its dev server proxies `/api` to `sponsor-check-api` (see `web/vite.config.ts`).
+  `web/src/types.ts` mirrors the API's JSON shapes by hand; keep them in sync when a Python
+  result shape changes.
 
 ## How matching works (don't break these)
 

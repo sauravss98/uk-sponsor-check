@@ -46,6 +46,10 @@ def data_dir() -> Path:
     return Path(os.environ.get("SPONSOR_CHECK_HOME", Path.home() / ".cache" / "sponsor-check"))
 
 
+def database_path() -> Path:
+    return data_dir() / "register.sqlite3"
+
+
 def _clean(value: str | None) -> str:
     value = (value or "").strip().strip(",").strip()
     return "" if value.lower() == "not set" else value
@@ -130,7 +134,7 @@ def ensure_database(max_age: timedelta = timedelta(hours=24), force: bool = Fals
     from .fetch import download_register  # imported lazily so offline use never needs httpx
 
     root = data_dir()
-    db_path = root / "register.sqlite3"
+    db_path = database_path()
     fresh = (
         db_path.exists()
         and time.time() - db_path.stat().st_mtime < max_age.total_seconds()
