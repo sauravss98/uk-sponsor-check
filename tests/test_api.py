@@ -104,7 +104,7 @@ def live_home(tmp_path, monkeypatch, register):
     monkeypatch.setenv("SPONSOR_CHECK_HOME", str(tmp_path))
     downloads: list[int] = []
     monkeypatch.setattr(api, "ensure_database", lambda: downloads.append(1))
-    monkeypatch.setattr(api, "_live", {"register": None, "mtime": 0.0, "checked": 0.0})
+    monkeypatch.setattr(api, "_live", {"register": None, "mtime": 0.0, "checked": float("-inf")})
     return tmp_path, downloads
 
 

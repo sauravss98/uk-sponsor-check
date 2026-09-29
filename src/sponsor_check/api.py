@@ -48,7 +48,7 @@ app.add_middleware(
 REFRESH_INTERVAL = 3600  # seconds between checks for a newer register while the server runs
 
 _lock = threading.Lock()
-_live: dict = {"register": None, "mtime": 0.0, "checked": 0.0}
+_live: dict = {"register": None, "mtime": 0.0, "checked": float("-inf")}  # never checked
 
 
 def _default_register() -> Register:
