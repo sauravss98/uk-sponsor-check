@@ -2,7 +2,10 @@
 
 **Can this UK employer sponsor my visa?** Ask Claude, get an answer from the official Home Office register in seconds.
 
-`sponsor-check` is an MCP server, command-line tool and (in progress) web app that checks
+**Live demo: [sponsor-check.onrender.com](https://sponsor-check.onrender.com/)** (free hosting, so
+the first visit after a quiet spell can take up to a minute to wake up)
+
+`sponsor-check` is an MCP server, command-line tool and web app that checks
 employers against the
 [Register of licensed sponsors: workers](https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers),
 which UK Visas and Immigration republishes almost every working day. It also checks a salary
@@ -115,8 +118,8 @@ the diff. The script fails loudly rather than writing a half-empty file if a pag
 
 ## Web app
 
-A React frontend is taking shape in [`web/`](web/), talking to a small FastAPI wrapper
-(`src/sponsor_check/api.py`) over the same `register.py`/`salary.py` logic the CLI and MCP
+Try it at [sponsor-check.onrender.com](https://sponsor-check.onrender.com/). A React frontend in
+[`web/`](web/) talks to a small FastAPI wrapper (`src/sponsor_check/api.py`) over the same `register.py`/`salary.py` logic the CLI and MCP
 server use, so all three surfaces always agree.
 
 ```bash
@@ -161,7 +164,7 @@ GOV.UK at build time.
 ## Roadmap
 
 - [x] Salary check against Skilled Worker thresholds by occupation code
-- [ ] Web app: FastAPI + React frontend in `web/`, deployable to Render (see Deploying)
+- [x] Web app: FastAPI + React frontend, live at [sponsor-check.onrender.com](https://sponsor-check.onrender.com/)
 - [ ] `check_job` tool: extract employer and salary from a pasted job ad, run both checks
 - [ ] Companies House lookup to resolve brand names to legal entities
 - [ ] Publish to PyPI and the MCP registry
