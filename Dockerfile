@@ -18,6 +18,9 @@ ENV PYTHONUNBUFFERED=1 \
     SPONSOR_CHECK_HOME=/data \
     SPONSOR_CHECK_WEB_DIR=/app/web \
     SPONSOR_CHECK_API_HOST=0.0.0.0
+# The host's proxy is the only way in, so uvicorn trusts its X-Forwarded-For. Without this
+# every client shares the proxy's IP and therefore one /v1 rate limit bucket.
+ENV FORWARDED_ALLOW_IPS=*
 
 RUN useradd --create-home app && mkdir /data && chown app /data
 WORKDIR /app
