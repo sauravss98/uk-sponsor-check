@@ -4,5 +4,5 @@ services:
     name: sponsor-check
     runtime: docker
     plan: free
-    healthCheckPath: /api/health
+    healthCheckPath: /healthz
     autoDeploy: true

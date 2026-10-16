@@ -82,6 +82,10 @@ UNKNOWN_CODE = ("No such occupation code in the published tables. Occupation cod
                 "4-digit SOC 2020 codes: look one up in the CASCOT tool, or ask the employer "
                 "which code the job will be sponsored under.")
 
+FLOORS_ONLY = ("These are the flat salary floors only. Each occupation also has a going rate, "
+               "and the requirement is the higher of the two, so a salary above a floor can "
+               "still fall short. Check the occupation code for the full answer.")
+
 CAVEAT = ("Salary is only one requirement. The job must also be an eligible occupation, the "
           "employer must hold a sponsor licence, and the employer decides whether to sponsor. "
           "Confirm the figures with the employer. This is not immigration advice.")
@@ -202,6 +206,33 @@ def check_salary(salary: float, soc_code: str, new_entrant: bool = False) -> dic
                  "hourly rate, not the same salary.")
     notes += _closing_notes(data)
     return {**result, "other_options": _other_options(occ, salary, option), "notes": notes}
+
+
+def check_floors(salary: float) -> dict:
+    """Compare a salary with the general threshold and the new entrant floor alone.
+
+    For callers that only have an advertised salary and no occupation code, such as a job
+    ad. Meeting a floor is necessary but not sufficient: the going rate also applies, which
+    only ``check_salary`` can answer.
+    """
+    data = thresholds()
+    floors = data["general_thresholds"]
+    general = floors[OPTIONS["standard"]["floor_key"]]
+    new_entrant = floors[OPTIONS["new_entrant"]["floor_key"]]
+    return {
+        "salary": salary,
+        "route": data["route"],
+        "general_threshold": general,
+        "meets_general": salary >= general,
+        "new_entrant_threshold": new_entrant,
+        "meets_new_entrant": salary >= new_entrant,
+        # What an hourly rate has to be multiplied by to compare: the going rates assume
+        # this week, and the Immigration Rules annualise pay over this many weeks.
+        "hours_per_week_basis": data["hours_per_week_basis"],
+        "weeks_per_year_basis": data["weeks_per_year_basis"],
+        "thresholds": _source(),
+        "notes": [FLOORS_ONLY, *_closing_notes(data)],
+    }
 
 
 def _closing_notes(data: dict) -> list[str]:

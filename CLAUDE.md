@@ -24,6 +24,7 @@ sponsor-check check "Company"    # verdict; exit code 0 only when licensed
 sponsor-check search "query" -n 10 --json
 sponsor-check salary 45000 2136  # salary vs threshold + going rate; exit 0 only when it meets
 python scripts/refresh_thresholds.py   # rebuild thresholds.json from GOV.UK (needs internet)
+python scripts/check_deploy.py <url>   # after a deploy: healthz, cached latency, rate-limit spoofing
 npx @modelcontextprotocol/inspector sponsor-check-mcp   # poke the MCP tools by hand
 sponsor-check-api                # FastAPI backend for the web app, http://127.0.0.1:8000
 cd web && npm install && npm run dev   # React frontend, http://localhost:5173 (proxies /api)
@@ -43,7 +44,7 @@ src/sponsor_check/
   data/thresholds.json   generated: general thresholds, going rates, discounts, per-SOC data
   cli.py         argparse CLI
   server.py      MCP server (4 read-only tools)
-  api.py         FastAPI backend for the web app (thin: no logic, just JSON over register.py/salary.py)
+  api.py         FastAPI: /api for the web app, /v1 for the extension (thin: JSON over register.py/salary.py)
 scripts/
   refresh_thresholds.py   scrapes GOV.UK to regenerate data/thresholds.json (dev only)
 tests/
@@ -82,6 +83,10 @@ Dockerfile, render.yaml          one container (API + built frontend), deployed 
 - Pages used: the Skilled Worker guide (`your-job`, `when-you-can-be-paid-less`) for the flat
   thresholds, plus the going rates, eligible occupations, new entrant, PhD discount,
   immigration salary list and temporary shortage list tables.
+- `weeks_per_year_basis` (52) is not stated on the going-rates page, so `weeks_basis()` derives
+  it from the table's "£X (£Y per hour)" pairs (all 531 agreed on 2026-10-16) and raises if they
+  ever disagree. It matches Appendix Skilled Worker SW 14.3, which annualises as hourly x hours
+  x 52 and counts at most 48 hours a week towards the salary thresholds.
 - The requirement is always `max(floor, rate)`: the floor comes from `general_thresholds`, the
   rate from the occupation entry. Discounted rates are published per occupation, not computed
   as a percentage here.
@@ -102,9 +107,41 @@ Dockerfile, render.yaml          one container (API + built frontend), deployed 
   lazy-singleton pattern as `server.py`'s `_register()`), so `test_api.py` can override it with
   `app.dependency_overrides` and point it at the fixture DB instead of the real cache. Follow
   that pattern for any new endpoint that needs the register.
+- `/v1/*` (`/v1/lookup`, `/v1/salary-check`) plus `/healthz` is the stable contract for the
+  Sponsor Badge extension, a separate repo (`sponsor-badge`) we can't update in lockstep. Its
+  shapes are the Pydantic models in `api.py` (`LookupResult`, `SalaryFloors`): add fields, never
+  rename or remove them. `/api/*` belongs to `web/` and may change with it.
+  - `/v1/lookup` is `register.check()` reshaped; `possible_match` becomes `possible`. It keeps
+    the `notes`, so the caveat and B-rated/provisional warnings still reach the user, but strips
+    the Markdown emphasis (`*can*`) because `/v1` promises plain text.
+  - `/v1/salary-check` takes only an amount (job ads rarely give a SOC code) and calls
+    `salary.check_floors()`, which compares against the flat floors and says so in its notes.
+    It also returns `hours_per_week_basis` and `weeks_per_year_basis` so a client can annualise
+    an hourly rate without hardcoding either.
+  - `_lookup` is an `lru_cache` keyed on `(Register, canonical(name, strict=True), route)`,
+    cleared by `_default_register()` whenever it swaps in a newer register. The key must be the
+    strict form: the loose one would make "Amazon" and "The Amazon" share an answer. Tests clear
+    it in `client`.
+  - slowapi limits `/v1` to `SPONSOR_CHECK_RATE_LIMIT` (default `60/minute`) per client IP,
+    shared across all `/v1` endpoints, in memory (per process). Decorated endpoints need
+    `request: Request` and `response: Response` params. The Dockerfile sets
+    `FORWARDED_ALLOW_IPS=*` so uvicorn takes the client IP from the proxy's X-Forwarded-For.
+    Tests call `limiter.reset()` in `client`.
 - CORS is explicit and allowlist-based (`SPONSOR_CHECK_CORS_ORIGINS`, comma-separated; defaults
-  to the Vite dev origins). This is the one surface here that's meant to be reachable from a
-  browser, unlike the MCP server (stdio) and the CLI, so don't relax it to `*`.
+  to the Vite dev origins plus `DEV_EXTENSION_ORIGIN`, the extension's dev build, whose ID is
+  pinned by the `key` in sponsor-badge's manifest). Production sets the env var, including the
+  Web Store ID once it exists. `Retry-After` is exposed so a cross-origin caller can read it on
+  a 429. This is the one surface here that's meant to be reachable from a browser, unlike the
+  MCP server (stdio) and the CLI, so don't relax it to `*`.
+- Logging: `log_request` middleware writes one JSON line per request to the
+  `sponsor_check.access` logger (method, path, status, ms). Never the query string (names) or
+  the client IP; health checks are skipped. `main()` turns uvicorn's access log off because it
+  prints full URLs. slowapi's own warnings include the client IP, so leave the root logger
+  unconfigured (slowapi's handler then discards them).
+- Rate-limit client IP on Render is `(unverified)`: Render's docs don't say whether it replaces or
+  appends to a client-sent `X-Forwarded-For`, and uvicorn with `FORWARDED_ALLOW_IPS=*` trusts the
+  first entry. `scripts/check_deploy.py` measures it against the live URL. Locally it always
+  reports spoofable, because uvicorn trusts headers from 127.0.0.1.
 - `pyproject.toml`'s `api` extra (fastapi, uvicorn) is required for `api.py`; `dev` depends on
   it (`sponsor-check[api]`) so `pip install -e ".[dev]"` still installs everything needed to
   run the test suite, including `test_api.py`.
@@ -123,18 +160,23 @@ Dockerfile, render.yaml          one container (API + built frontend), deployed 
 ## How matching works (don't break these)
 
 1. `canonical()` lowercases, strips accents, turns `&` into `and`, removes punctuation and legal
-   suffixes (`ltd`, `limited`, `plc`, `llp`, ...). Noise words (`uk`, `the`) are dropped only if
-   something meaningful remains, so a name never canonicalises to an empty string.
+   suffixes (`ltd`, `limited`, `plc`, `llp`, ...). Noise words (`uk`, `the`, `trade`, `name`)
+   are dropped only if something meaningful remains, so a name never canonicalises to an empty
+   string. `canonical(name, strict=True)` keeps the brand noise words (`the`, `trade`, `name`)
+   and still drops `uk`, which behaves like a legal suffix.
 2. `aliases()` indexes each org under its full canonical name AND each legal/trading part split on
    `T/A`, `t/as`, `trading as`, standalone `TA`. The split regex needs whitespace around the
    marker so words like "Tata" are not split.
-3. Search: exact alias lookup first (score 100), then RapidFuzz `WRatio` over all aliases, with a
-   boost when an alias starts with the query.
+3. Search: exact lookup on the loose alias first. A hit scores 100 only if the strict forms are
+   also equal (`Register._confirms`, recomputed from the org's name, so no schema change);
+   otherwise 99. "Amazon" vs "Maxico Uk limited t/a The Amazon" is the case this exists for.
+   Then RapidFuzz `WRatio` over all aliases, with a boost when an alias starts with the query.
 
 ### Invariants
 
-- **Only an exact alias match may score 100.** Fuzzy scores are capped at 99. The `licensed`
-  verdict depends on this; a guess must never be reported as a confirmed licence.
+- **Only an exact alias match, strict forms included, may score 100.** Fuzzy scores and loose-only
+  hits are capped at 99. The `licensed` verdict depends on this; a guess must never be reported
+  as a confirmed licence.
 - Verdict bands: 100 = `licensed` (or `licensed_other_routes`), 90-99 = `possible_match`,
   below = `not_found` with the closest names shown.
 - Every verdict includes the register date and the caveat that a licence does not mean the

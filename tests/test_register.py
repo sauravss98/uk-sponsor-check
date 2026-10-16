@@ -1,10 +1,15 @@
+import pytest
+
+from sponsor_check.register import rating_of
+
+
 def test_build_groups_routes_per_organisation(register):
     meta = register.meta()
     assert meta["register_date"] == "2026-09-28"
-    assert meta["rows"] == "22"
+    assert meta["rows"] == "24"
     # "2i Limited" and "2I LIMITED" in Edinburgh are one organisation; K Line, 2 Sisters,
     # 1st Visa each collapse two route rows into one.
-    assert meta["organisations"] == "18"
+    assert meta["organisations"] == "20"
 
 
 def test_exact_match_ignores_case_and_legal_suffix(register):
@@ -32,6 +37,37 @@ def test_licensed_on_other_route_only(register):
 
 def test_route_parameter(register):
     assert register.check("Mode Agence", route="Creative Worker")["verdict"] == "licensed"
+
+
+@pytest.mark.parametrize("type_rating, expected", [
+    ("Worker (A rating)", "A"),
+    ("Temporary Worker (B rating)", "B"),
+    ("Worker (A (Premium))", "A"),
+    ("Temporary Worker (A (SME+))", "A"),
+    ("Worker (UK Expansion Worker: Provisional )", "Provisional"),
+    ("Worker", "Unknown"),
+])
+def test_rating_of(type_rating, expected):
+    assert rating_of(type_rating) == expected
+
+
+def test_premium_sponsor_is_a_rated(register):
+    result = register.check("Google")
+    assert result["verdict"] == "licensed"
+    assert result["matches"][0]["routes"][0]["rating"] == "A"
+
+
+def test_dropped_brand_word_is_not_an_exact_match(register):
+    # The Port Talbot "The Amazon" must not be confirmed as "Amazon".
+    result = register.check("Amazon")
+    assert result["verdict"] == "possible_match"
+    assert result["matches"][0]["score"] < 100
+
+
+def test_brand_word_kept_is_still_exact(register):
+    result = register.check("The Amazon")
+    assert result["verdict"] == "licensed"
+    assert result["matches"][0]["name"] == "Maxico Uk limited t/a The Amazon"
 
 
 def test_b_rating_is_flagged(register):

@@ -101,6 +101,9 @@ query ► normalise ► exact alias lookup ─┴─► RapidFuzz WRatio over al
   API, with an HTML fallback.
 - Exact alias hits score 100. Fuzzy hits are capped at 99 so a guess is never reported as a
   confirmed licence; names that start with the query get a boost.
+- A name that only matches once words like "the" are dropped is not confirmed: "Amazon" is a
+  possible match for "... t/a The Amazon", not an exact one. "UK" is still ignored, so "Google"
+  confirms "Google (UK) Limited".
 - Verdict bands: 100 = `licensed`, 90 to 99 = `possible_match`, below that = `not_found`
   (closest names still shown).
 
@@ -132,6 +135,23 @@ npm run dev                # http://localhost:5173, proxies /api to the server a
 ```
 
 See [`web/README.md`](web/README.md) for more.
+
+### Versioned API (`/v1`)
+
+A stable JSON API for other clients, such as the Sponsor Badge browser extension. Unlike
+`/api`, which changes with the web app, `/v1` only ever gains fields.
+
+| Endpoint | Returns |
+|---|---|
+| `GET /v1/lookup?name=Starling%20Bank` (optional `route`, default `Skilled Worker`) | `status` (`licensed`, `licensed_other_routes`, `possible` or `not_found`), `legal_name`, `town`, `rating`, `routes`, `register_date`, `source_url`, `register_url`, `confidence` and `notes` |
+| `GET /v1/salary-check?amount=45000` | Whether the salary clears the general threshold and the new entrant floor, with the source and date of both, plus the hours-per-week and weeks-per-year basis for annualising an hourly rate. These are floors only: the occupation's going rate also applies |
+| `GET /healthz` | `{"status": "ok"}` |
+
+`confidence` is 100 only for an exact match on a legal or trading name, so a fuzzy guess is
+never reported as `licensed`. Lookups are cached on the normalised name. `/v1` is limited to
+60 requests a minute per IP across all its endpoints (`SPONSOR_CHECK_RATE_LIMIT` changes this),
+and over the limit it returns `429` with `Retry-After`. Browser clients on another origin must be
+listed in `SPONSOR_CHECK_CORS_ORIGINS` (comma-separated, e.g. `chrome-extension://<id>`).
 
 ### Deploying
 

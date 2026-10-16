@@ -26,6 +26,10 @@ _LEGAL_SUFFIXES = {
 
 # Words that only add noise when something more specific is present.
 _NOISE = {"uk", "the", "trade", "name"}
+# Noise words that can still be part of a brand: "The Amazon" is not "Amazon". Dropping them is
+# fine for finding a name, but a confirmed match must agree on them. "uk" is not here because it
+# works like a legal suffix: "Google" should still confirm "Google (UK) Limited".
+_BRAND_NOISE = {"the", "trade", "name"}
 
 _NON_ALNUM = re.compile(r"[^a-z0-9]+")
 
@@ -36,8 +40,11 @@ def _ascii_lower(text: str) -> str:
     return text.lower().replace("&", " and ")
 
 
-def canonical(name: str) -> str:
+def canonical(name: str, strict: bool = False) -> str:
     """Reduce a company name to a comparable key.
+
+    ``strict`` keeps the noise words that can be part of a brand (``_BRAND_NOISE``). Search
+    uses the loose key to find candidates and the strict key to decide which are exact.
 
     >>> canonical("F-Secure (UK) Limited")
     'f secure'
@@ -46,7 +53,8 @@ def canonical(name: str) -> str:
     """
     tokens = _NON_ALNUM.sub(" ", _ascii_lower(name)).split()
     kept = [t for t in tokens if t not in _LEGAL_SUFFIXES]
-    meaningful = [t for t in kept if t not in _NOISE]
+    noise = _NOISE - _BRAND_NOISE if strict else _NOISE
+    meaningful = [t for t in kept if t not in noise]
     return " ".join(meaningful or kept)
 
 
@@ -60,11 +68,11 @@ def split_trading_names(raw: str) -> list[str]:
     return [p for p in parts if p]
 
 
-def aliases(raw: str) -> list[str]:
+def aliases(raw: str, strict: bool = False) -> list[str]:
     """All canonical keys a register entry should be findable under (deduplicated, ordered)."""
     keys: list[str] = []
     for part in [raw, *split_trading_names(raw)]:
-        key = canonical(part)
+        key = canonical(part, strict)
         if key and key not in keys:
             keys.append(key)
     return keys

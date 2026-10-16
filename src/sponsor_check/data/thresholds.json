@@ -38,6 +38,7 @@
   "non_stem_phd_floor": 37500
  },
  "hours_per_week_basis": 37.5,
+ "weeks_per_year_basis": 52,
  "national_pay_scale_urls": [
   "https://www.gov.uk/government/publications/national-pay-scales-for-eligible-healthcare-jobs",
   "https://www.gov.uk/government/publications/national-pay-scales-for-eligible-teaching-and-education-jobs"
