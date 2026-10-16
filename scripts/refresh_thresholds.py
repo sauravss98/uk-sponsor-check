@@ -154,6 +154,21 @@ def hours_basis(going_rates: dict) -> float:
     return float(m.group(1))
 
 
+def weeks_basis(going_rates: dict, hours: float) -> int:
+    """Weeks per year implied by the table, which prints each rate as '£X (£Y per hour)'.
+
+    GOV.UK states the hours basis but not a weeks-per-year figure, so derive it from every
+    published pair and refuse to guess if they disagree (beyond the hourly figure's rounding).
+    """
+    text = " ".join(re.sub(r"<[^>]+>", " ", going_rates["details"]["body"]).split())
+    pairs = re.findall(r"£([\d,]+) \(£([\d.]+) per hour\)", text)
+    weeks = [int(annual.replace(",", "")) / (float(hourly) * hours) for annual, hourly in pairs]
+    if len(pairs) < 100 or max(weeks) - min(weeks) > 0.1:
+        raise SystemExit(f"annual/hourly pairs don't imply one weeks-per-year figure: {len(pairs)} "
+                         f"pairs, {min(weeks, default=0):.2f} to {max(weeks, default=0):.2f}")
+    return round(sum(weeks) / len(weeks))
+
+
 def main() -> int:
     with httpx.Client(headers=HEADERS, timeout=60.0, follow_redirects=True) as client:
         guide = fetch(client, GUIDE)
@@ -223,6 +238,9 @@ def main() -> int:
         "sources": dict(sorted(sources.items())),
         "general_thresholds": guide_thresholds(guide),
         "hours_per_week_basis": hours_basis(pages["going_rates"]),
+        # Derived, not stated: see weeks_basis().
+        "weeks_per_year_basis": weeks_basis(pages["going_rates"],
+                                            hours_basis(pages["going_rates"])),
         "national_pay_scale_urls": pay_scale_urls(pages["going_rates"]),
         "occupations": dict(sorted(occupations.items())),
     }
