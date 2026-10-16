@@ -28,7 +28,8 @@ from .normalize import aliases, canonical
 DEFAULT_ROUTE = "Skilled Worker"
 EXACT, STRONG, WEAK = 100, 90, 75  # score bands
 
-_RATING = re.compile(r"\(([AB]) rating\)", re.IGNORECASE)
+# "(A rating)", "(B rating)", and premium tiers such as "(A (Premium))" or "(A (SME+))".
+_RATING = re.compile(r"\(([AB])\b", re.IGNORECASE)
 _DATE_IN_URL = re.compile(r"(\d{4}-\d{2}-\d{2})")
 
 SCHEMA = """
@@ -206,16 +207,25 @@ class Register:
         return Match(o["name"], o["town"] or "", o["county"] or "", routes, score, alias)
 
     # -- public API
+    def _confirms(self, org_id: int, strict_query: str) -> bool:
+        """Whether a loose alias hit is still equal with brand words like "the" kept."""
+        name = self.conn.execute("SELECT name FROM organisations WHERE id=?", (org_id,)).fetchone()
+        return strict_query in aliases(name["name"], strict=True)
+
     def search(self, query: str, limit: int = 5, stop_on_exact: bool = False) -> list[Match]:
         q = canonical(query)
         if not q:
             return []
+        strict_q = canonical(query, strict=True)
         best: dict[int, tuple[float, str]] = {}
 
         for row in self.conn.execute("SELECT org_id FROM aliases WHERE alias=?", (q,)):
-            best[row["org_id"]] = (EXACT, q)
+            # "Amazon" hits "... t/a The Amazon" on the loose key; that is a lead, not a match.
+            score = EXACT if self._confirms(row["org_id"], strict_q) else EXACT - 1
+            best[row["org_id"]] = (score, q)
+        exact_found = any(score == EXACT for score, _ in best.values())
 
-        if len(best) < limit and not (stop_on_exact and best):
+        if len(best) < limit and not (stop_on_exact and exact_found):
             if self._alias_keys is None:
                 self._load_aliases()
             hits = process.extract(
