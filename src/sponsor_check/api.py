@@ -183,9 +183,24 @@ def salary(req: SalaryRequest) -> dict:
 
 RATE_LIMIT = os.environ.get("SPONSOR_CHECK_RATE_LIMIT", "60/minute")
 
-# In memory, so per process: fine for a single container. Behind a proxy the client IP comes
-# from X-Forwarded-For, which uvicorn only trusts from FORWARDED_ALLOW_IPS (see Dockerfile).
-limiter = Limiter(key_func=get_remote_address, headers_enabled=True)
+# Which request header holds the real client IP, if the host sets one the client can't forge.
+# On Render it's Cloudflare's CF-Connecting-IP (set in the Dockerfile): X-Forwarded-For keeps
+# whatever the client sent as its first entry, so trusting it let anyone dodge the limit
+# (measured with scripts/check_deploy.py on 2026-10-16).
+CLIENT_IP_HEADER = os.environ.get("SPONSOR_CHECK_CLIENT_IP_HEADER", "").strip().lower()
+
+
+def client_ip(request: Request) -> str:
+    """Rate-limit key: the configured header when present, else the connecting address."""
+    if CLIENT_IP_HEADER:
+        value = request.headers.get(CLIENT_IP_HEADER, "").strip()
+        if value:
+            return value
+    return get_remote_address(request)
+
+
+# In memory, so per process: fine for a single container.
+limiter = Limiter(key_func=client_ip, headers_enabled=True)
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 # One budget shared by every /v1 endpoint, rather than 60/min for each of them.

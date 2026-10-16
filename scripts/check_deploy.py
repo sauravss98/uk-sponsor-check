@@ -4,11 +4,12 @@
 
 1. /healthz answers.
 2. Latency of a cached /v1/lookup, measured from this machine (so it includes your network).
-3. Whether the rate limit can be dodged by sending a fake X-Forwarded-For. It sends 61 requests,
-   each claiming a different client IP. If none is refused, the limiter is trusting a header the
-   client controls. This uses up your own rate-limit budget for a minute.
+3. Whether the rate limit can be dodged with a fake client-IP header, for each header a client
+   might forge. Each test sends 61 requests, each claiming a different IP. If none is refused,
+   the limiter trusts a header the client controls. A spoofable header gets fresh buckets even
+   after the real one is used up, so the tests stay valid when run back to back.
 
-Makes about 85 requests to the URL you give it. Prints measurements only; nothing is stored.
+Makes about 145 requests to the URL you give it. Prints measurements only; nothing is stored.
 """
 
 from __future__ import annotations
@@ -43,19 +44,21 @@ def main(base: str) -> int:
         print(f"cached lookup over {SAMPLES} requests: median {statistics.median(timings):.0f} ms, "
               f"p95 {p95:.0f} ms, max {timings[-1]:.0f} ms")
 
-        refused = 0
-        for i in range(LIMIT + 1):
-            fake_ip = f"198.51.100.{i % 250 + 1}"  # TEST-NET-2, never a real client
-            resp = client.get(f"{base}/v1/salary-check", params={"amount": 1},
-                              headers={"X-Forwarded-For": fake_ip})
-            refused += resp.status_code == 429
-        if refused:
-            print(f"rate limit: {refused} of {LIMIT + 1} refused despite fake X-Forwarded-For "
-                  "values, so the limiter is not trusting the client's header.")
-        else:
-            print(f"rate limit: SPOOFABLE. {LIMIT + 1} requests with fake X-Forwarded-For values "
-                  "were all accepted.")
-    return 0
+        spoofable = False
+        for header in ("X-Forwarded-For", "CF-Connecting-IP"):
+            refused = 0
+            for i in range(LIMIT + 1):
+                fake_ip = f"198.51.100.{i % 250 + 1}"  # TEST-NET-2, never a real client
+                resp = client.get(f"{base}/v1/salary-check", params={"amount": 1},
+                                  headers={header: fake_ip})
+                refused += resp.status_code == 429
+            if refused:
+                print(f"rate limit vs fake {header}: {refused} of {LIMIT + 1} refused, so it is "
+                      "not trusted.")
+            else:
+                spoofable = True
+                print(f"rate limit vs fake {header}: SPOOFABLE, all {LIMIT + 1} accepted.")
+    return 1 if spoofable else 0
 
 
 if __name__ == "__main__":

@@ -138,10 +138,12 @@ Dockerfile, render.yaml          one container (API + built frontend), deployed 
   the client IP; health checks are skipped. `main()` turns uvicorn's access log off because it
   prints full URLs. slowapi's own warnings include the client IP, so leave the root logger
   unconfigured (slowapi's handler then discards them).
-- Rate-limit client IP on Render is `(unverified)`: Render's docs don't say whether it replaces or
-  appends to a client-sent `X-Forwarded-For`, and uvicorn with `FORWARDED_ALLOW_IPS=*` trusts the
-  first entry. `scripts/check_deploy.py` measures it against the live URL. Locally it always
-  reports spoofable, because uvicorn trusts headers from 127.0.0.1.
+- Rate-limit client IP: `client_ip()` keys on `SPONSOR_CHECK_CLIENT_IP_HEADER` (Dockerfile:
+  `cf-connecting-ip`, set by the Cloudflare layer in front of Render) and falls back to the
+  connecting address. Measured 2026-10-16: Render keeps a client-sent `X-Forwarded-For` as the
+  first entry, so keying on it (uvicorn + `FORWARDED_ALLOW_IPS=*`) was spoofable. Re-check with
+  `scripts/check_deploy.py <url>` after deploy changes; locally it always reports spoofable,
+  because uvicorn trusts headers from 127.0.0.1 and no header is configured.
 - `pyproject.toml`'s `api` extra (fastapi, uvicorn) is required for `api.py`; `dev` depends on
   it (`sponsor-check[api]`) so `pip install -e ".[dev]"` still installs everything needed to
   run the test suite, including `test_api.py`.

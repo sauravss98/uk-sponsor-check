@@ -267,6 +267,20 @@ def test_v1_rate_limit_is_shared_across_endpoints(client):
     assert resp.headers.get("access-control-allow-origin") == "http://localhost:5173"
 
 
+def test_client_ip_uses_configured_header(monkeypatch):
+    from starlette.requests import Request
+
+    def request(headers: dict[str, str]) -> Request:
+        raw = [(k.lower().encode(), v.encode()) for k, v in headers.items()]
+        return Request({"type": "http", "headers": raw, "client": ("10.0.0.1", 1234)})
+
+    monkeypatch.setattr(api, "CLIENT_IP_HEADER", "cf-connecting-ip")
+    assert api.client_ip(request({"CF-Connecting-IP": "203.0.113.9"})) == "203.0.113.9"
+    assert api.client_ip(request({})) == "10.0.0.1"  # header missing: fall back
+    monkeypatch.setattr(api, "CLIENT_IP_HEADER", "")
+    assert api.client_ip(request({"CF-Connecting-IP": "203.0.113.9"})) == "10.0.0.1"
+
+
 def test_health_endpoints_are_not_rate_limited(client):
     for _ in range(70):
         assert client.get("/healthz").status_code == 200
